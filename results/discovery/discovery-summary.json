@@ -1,0 +1,21 @@
+{
+  "y_cross_validation_correlations": {},
+  "y_cross_validation_pass": false,
+  "y_final_genes": {
+    "young_up": 0,
+    "old_up": 0
+  },
+  "identity_genes": 1599,
+  "pluripotency_genes": 2125,
+  "damage_genes": {
+    "GO:0006979": 360,
+    "GO:0006974": 767,
+    "GO:0034976": 227,
+    "GO:0090398": 63
+  },
+  "mptr_matched_pairs": 13,
+  "mptr_donors": 3,
+  "discovery_separation_pass": false,
+  "candidate_universe": 9131,
+  "validation_unsealed": false
+}

@@ -1,0 +1,9 @@
+endpoint,status,estimate,interpretation
+Protocol-v1 Y construction,failed,0 selected genes,No gene met q<=0.10 in both age references
+A1 chronological-age association,passed,"pooled Spearman -0.7302; cohorts -0.8466 and -0.4577",Age association only
+MPTR discovery separation,passed,"Delta Y 0.437 [0.163,0.610]",Discovery-stage axis separation
+Human chemical temporal validation,failed,6 of 8 donor-day-cocktail effects negative,Neither cocktail passed across both donor lines and days
+OSKM trajectory order,failed,"day 3 Delta Y 0.308; Delta I -0.082; Delta P 0.094",Youthward movement did not precede risk-axis changes
+Adverse in-vivo 7c,formally passed but non-informative,"liver -0.117 [-0.191,-0.041]; kidney -0.075 [-0.173,0.025]",Tissue identity unavailable
+GSTA4 expression challenge,not supported,"Delta Y 0.032 [-0.638,0.557]",No youth-direction or aggregate-D validation
+Five-target recovery,failed and incomplete,"3/5 evaluable; matched-null P=0.332",GSTA4 and TOMM70A absent from universe

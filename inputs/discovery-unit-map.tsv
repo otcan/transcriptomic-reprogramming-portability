@@ -1,0 +1,9 @@
+accession	biological_unit	condition_map	inclusion_decision	access_terms
+GSE113957	donor fibroblast line	normal versus HGPS; age; sex	include 133 normal; exclude 10 HGPS primary	public GEO input; no raw redistribution
+GSE226189	donor primary fibroblast	age; sex	include all 82 resolved donors	public GEO input; no raw redistribution
+GSE165176	donor fibroblast line	line; day; CD13/SSEA4 state; experiment	include all resolved states; paired six-line I/P construction	public GEO input; no raw redistribution
+GSE165177	donor fibroblast line	line; experiment; duration; successful/failed/control state	include resolved matched states; aggregate within donor/state/duration	public GEO input; no raw redistribution
+GSE176206	independently prepared screen pool	cell type; age class; factor barcode; pool	screen H5ADs only primary; single-pool SOKM excluded from inference	public GEO input; no raw redistribution
+GSE246954	labelled biological replicate	age 4/20 months; untreated/2c/7c	include all 24 after source-method replicate confirmation	public GEO input; no raw redistribution
+GSE247179	labelled biological replicate	age; vehicle/2c/7c/iPSC	secondary methylation sensitivity only	public GEO input; no raw redistribution
+

@@ -1,0 +1,20 @@
+{
+  "model": "Y_A1 frozen at adaptive-y-a1",
+  "gse297984_positive_by_cocktail": {
+    "2c": false,
+    "7c": false
+  },
+  "gse297984_positive_challenge_pass": false,
+  "gse297234_first_youthward_day": 3,
+  "gse297234_first_identity_or_pluripotency_risk_day": 3,
+  "gse297234_trajectory_order_pass": false,
+  "gse297234_young_minus_old_baseline_y": 0.8555904546463162,
+  "gse300625_guarded_calls": {
+    "liver": false,
+    "kidney": false
+  },
+  "gse300625_adverse_specificity_pass": true,
+  "gse300625_endpoint_informative": false,
+  "gse300625_endpoint_limit": "Tissue identity axis unavailable; guarded status is non-evaluable rather than an empirical negative call.",
+  "validation_refit": false
+}

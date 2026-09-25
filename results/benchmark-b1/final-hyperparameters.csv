@@ -1,0 +1,7 @@
+method,alpha,l1_ratio,n_components,nonzero_weights
+ridge_rank_a1,3.1622776601683795,,,
+elastic_net_rank,10.0,0.1,,
+pca50_ridge,31.622776601683793,,50.0,
+meta_effect_projection,,,,6135.0
+gse113957_only_ridge,3.1622776601683795,,,
+gse226189_only_ridge,1.0,,,

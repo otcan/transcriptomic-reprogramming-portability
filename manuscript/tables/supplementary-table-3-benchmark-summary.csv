@@ -1,0 +1,7 @@
+method,pooled_cv_spearman,gse113957_cv_spearman,gse226189_cv_spearman,young_old_controls_correct,favourable_family_fraction,final_hyperparameters
+ridge_rank_a1,-0.730162,-0.846594,-0.457697,yes,0.375,alpha=3.1622776602
+pca50_ridge,-0.713044,-0.836096,-0.365833,yes,0.375,"50 PCs; alpha=31.6227766017"
+meta_effect_projection,-0.314064,-0.598135,-0.027899,yes,0.625,6135 nonzero weights
+gse113957_only_ridge,-0.610470,-0.834736,-0.276452,yes,0.250,alpha=3.1622776602
+gse226189_only_ridge,-0.364765,-0.380415,-0.400462,yes,0.375,alpha=1
+elastic_net_rank,not evaluable,not evaluable,not evaluable,no,0,"alpha=10; l1_ratio=0.1; zero coefficients"

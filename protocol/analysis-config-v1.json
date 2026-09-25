@@ -1,0 +1,69 @@
+{
+  "version": "1.0",
+  "discovery_cutoff_utc": "2024-12-31T23:59:59Z",
+  "seeds": {
+    "cross_validation": 1729,
+    "bootstrap": 1729,
+    "target_null": 271828
+  },
+  "bootstrap_resamples": 10000,
+  "cross_validation_folds": 5,
+  "gene_filter": {
+    "minimum_cpm_or_fpkm": 1.0,
+    "minimum_sample_fraction": 0.2,
+    "minimum_program_genes": 15,
+    "minimum_program_coverage": 0.5
+  },
+  "y_selection": {
+    "per_study_bh_q_max": 0.10,
+    "minimum_genes_per_direction": 25,
+    "pooled_heldout_spearman_max": -0.35,
+    "per_study_heldout_spearman_max": -0.15
+  },
+  "ip_selection": {
+    "minimum_absolute_log2_change": 1.0,
+    "minimum_concordant_donor_lines": 5,
+    "total_donor_lines": 6
+  },
+  "preservation_margins": {
+    "identity_loss": -0.05,
+    "pluripotency_gain": 0.05
+  },
+  "go_release": "2024-01-17",
+  "go_terms": [
+    "GO:0006979",
+    "GO:0006974",
+    "GO:0034976",
+    "GO:0090398"
+  ],
+  "orthology_primary": "NCBI HomoloGene build 68 exact one-human/one-mouse groups",
+  "candidate_weights": {
+    "age_evidence": 0.40,
+    "reversal_evidence": 0.40,
+    "contrast_consistency": 0.20
+  },
+  "discovery_expression_accessions": [
+    "GSE113957",
+    "GSE226189",
+    "GSE165176",
+    "GSE165177",
+    "GSE176206",
+    "GSE246954"
+  ],
+  "temporal_validation_accessions": [
+    "GSE297984",
+    "GSE297233",
+    "GSE297234",
+    "GSE300625",
+    "GSE304042",
+    "GSE304043"
+  ],
+  "known_target_benchmark": [
+    "GSTA4",
+    "DDX21",
+    "TOMM70A",
+    "SERBP1",
+    "PHGDH"
+  ]
+}
+

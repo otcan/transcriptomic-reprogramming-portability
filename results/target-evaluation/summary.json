@@ -1,0 +1,29 @@
+{
+  "targets": [
+    "GSTA4",
+    "DDX21",
+    "TOMM70A",
+    "SERBP1",
+    "PHGDH"
+  ],
+  "evaluable_targets": [
+    "DDX21",
+    "SERBP1",
+    "PHGDH"
+  ],
+  "missing_targets": [
+    "GSTA4",
+    "TOMM70A"
+  ],
+  "complete_five_target_endpoint": false,
+  "candidate_universe": 9131,
+  "observed_mean_percentile_evaluable_only": 0.5609097214616873,
+  "null_mean": 0.48699327693206296,
+  "null_interval_95": [
+    0.17237889241777093,
+    0.8034538933304127
+  ],
+  "one_sided_empirical_p": 0.3323666763332367,
+  "resamples": 100000,
+  "seed": 271828
+}

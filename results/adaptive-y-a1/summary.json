@@ -1,0 +1,17 @@
+{
+  "adaptive": true,
+  "protocol_v1_y_status": "FAILED_ZERO_GENES",
+  "n_features": 10532,
+  "final_alpha": 3.1622776601683795,
+  "outer_spearman_y_vs_age": {
+    "pooled": -0.7301624388033175,
+    "GSE113957": -0.8465936466546055,
+    "GSE226189": -0.45769704410949924
+  },
+  "inputs": {
+    "discovery_manifest_sha256": "c7a5ddeadd7b15806313b82265b22e9508cd0fb83fe991f15a9058953d9a589a",
+    "adaptive_config_sha256": "85ee1903e98910db8ba72de51e7bb3705cf2beea89ea77e9c54c10cb95245f0d"
+  },
+  "validation_unsealed": false,
+  "intervention_state_outcomes_inspected_before_lock": false
+}

@@ -1,0 +1,7 @@
+,positive_family_fraction
+ridge_rank_a1,0.375
+elastic_net_rank,0.0
+pca50_ridge,0.375
+meta_effect_projection,0.625
+gse113957_only_ridge,0.25
+gse226189_only_ridge,0.375

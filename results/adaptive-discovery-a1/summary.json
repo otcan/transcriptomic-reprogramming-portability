@@ -1,0 +1,20 @@
+{
+  "adaptive_model": "Y_A1",
+  "mptr_matched_pairs": 13,
+  "mptr_failed_matched_pairs": 21,
+  "mptr_donors": 3,
+  "mptr_separation_pass": true,
+  "mptr_guarded_pass": true,
+  "gse176206_adipo_pseudobulks": 64,
+  "gse176206_msc_pseudobulks": 64,
+  "gse176206_factor_delta_rows": 120,
+  "gse176206_spearman_delta_y_delta_i": 0.01343843322452948,
+  "gse246954_young_minus_old_y_estimate": 0.24544955206262722,
+  "gse246954_young_minus_old_y_ci": [
+    0.20114313882286872,
+    0.2963846100267289
+  ],
+  "gse246954_2c_y_estimate": -0.3958298811427097,
+  "gse246954_7c_y_estimate": -0.46265714333161073,
+  "validation_unsealed": false
+}

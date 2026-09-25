@@ -1,0 +1,7 @@
+family	dataset	unit	contrast	primary_endpoint	pass_rule	inference_limit
+positive	GSE297984	donor line	2c and 7c versus matched control within donor/day	Delta_Y	Both donor lines positive for at least one common cocktail and aggregate direction agrees at both days	Two donors; directional only
+descriptive	GSE297233	culture preparation	OSK or O4YRSK dox versus matched no-dox	Delta_S	Report all axes; no binary pass	One donor; n=2 per arm
+trajectory	GSE297234	donor-line library	old donor day 0,3,7,10	ordering of Y versus I/P	Y rises before P>0.05 or I<-0.05	One donor per age; no p-value
+adverse	GSE300625	animal	7c versus vehicle within liver/kidney	guarded_youthward	Neither tissue passes guarded status	Tissue-specific; animals are independent
+mechanism	GSE304043	animal	GSTA4 versus GFP aged RPE	Delta_Y and Delta_D	Report effect/interval and immutable GSTA4 rank	Small n; fibroblast I unavailable
+

@@ -1,0 +1,62 @@
+{
+  "figure-1-study-design.pdf": {
+    "bytes": 22739,
+    "sha256": "6b1939d3abbab285b6abad4a69b45d6bf21d4fc993ebbe0723a69aef3dbec539"
+  },
+  "figure-1-study-design.png": {
+    "bytes": 719694,
+    "sha256": "62343581a918cf4804233bb5ebad73a72485f80fccfddf03e60f1eb5a29db017"
+  },
+  "figure-2-frozen-framework.pdf": {
+    "bytes": 32311,
+    "sha256": "ce482491d05947a980f3d48917223205838a24a442c77e5a4e189fb4111ebc00"
+  },
+  "figure-2-frozen-framework.png": {
+    "bytes": 993006,
+    "sha256": "2398e423811efffd4051db7eeb730360cf968e95ba0e4e2142ee00006ffeb553"
+  },
+  "figure-3-model-benchmark.pdf": {
+    "bytes": 23740,
+    "sha256": "775dd9a9a75dcaf7cffde564a6170d3c6a428b8ddce3d66154cd6f78d31aa6e6"
+  },
+  "figure-3-model-benchmark.png": {
+    "bytes": 677540,
+    "sha256": "3cc90327391753d6a0591229df0adfe103e19ff43963c70321a97e26d01ad4fa"
+  },
+  "figure-4-concordance-and-interpretation.pdf": {
+    "bytes": 30424,
+    "sha256": "2cbb568c49a430f5a3e277169d912b6935098a67b2861cb74c1ac4c7ac9217a5"
+  },
+  "figure-4-concordance-and-interpretation.png": {
+    "bytes": 969099,
+    "sha256": "824284efe97a5c43ba92f2284119826b2303887ffad4ee33812c488eb7390f55"
+  },
+  "manifest.json": {
+    "bytes": 2254,
+    "sha256": "576a5c0d875754f8524114589922a813b982a042d3fcb19d5374b6a076711358"
+  },
+  "supplementary-figure-1-full-contrast-matrix.pdf": {
+    "bytes": 42278,
+    "sha256": "bbb58892dcffdccf3998e0fa67c33ccd868f860bf4d0a2917f9ce00cb046337d"
+  },
+  "supplementary-figure-1-full-contrast-matrix.png": {
+    "bytes": 293074,
+    "sha256": "3466fb4de6b00a51102f7f0e6d5c2b1416cb24ec34fdef089192cd1972ca9533"
+  },
+  "supplementary-figure-2-target-recovery.pdf": {
+    "bytes": 12889,
+    "sha256": "649c52ac51d5ee0f504b3aa7ecc568890992d52e021b6445643e860b96eed640"
+  },
+  "supplementary-figure-2-target-recovery.png": {
+    "bytes": 130633,
+    "sha256": "df610ba37d405f0d0e3f68582f897b81106db24ba7041957c450a5eaadb1c1ed"
+  },
+  "supplementary-figure-3-discovery-state-axes.pdf": {
+    "bytes": 13384,
+    "sha256": "1b5458cdce4c12c5e8eea130aaa3aafa19c2ff7448f280ac9d324119677b4654"
+  },
+  "supplementary-figure-3-discovery-state-axes.png": {
+    "bytes": 117873,
+    "sha256": "90ec5606eb2086aaec9aa39c56e239d111f6e3be79e49fb5ec7ecab72dec11af"
+  }
+}

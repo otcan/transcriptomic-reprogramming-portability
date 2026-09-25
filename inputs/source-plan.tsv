@@ -1,0 +1,16 @@
+role	accession	file	url	public_date	matrix_open_before_lock	planned_use
+discovery	GSE113957	GSE113957_fpkm.txt.gz	https://ftp.ncbi.nlm.nih.gov/geo/series/GSE113nnn/GSE113957/suppl/GSE113957_fpkm.txt.gz	2018-11-16	no	Y reference
+discovery	GSE226189	GSE226189_RAW.tar	https://ftp.ncbi.nlm.nih.gov/geo/series/GSE226nnn/GSE226189/suppl/GSE226189_RAW.tar	2023-07-06	no	Y reference
+discovery	GSE165176	GSE165176_Log2_RPM_Sendai_reprogramming.txt.gz	https://ftp.ncbi.nlm.nih.gov/geo/series/GSE165nnn/GSE165176/suppl/GSE165176_Log2_RPM_Sendai_reprogramming.txt.gz	2022-04-19	no	I/P construction
+discovery	GSE165177	GSE165177_Log2_RPM_Transient_reprogramming.txt.gz	https://ftp.ncbi.nlm.nih.gov/geo/series/GSE165nnn/GSE165177/suppl/GSE165177_Log2_RPM_Transient_reprogramming.txt.gz	2022-04-19	no	MPTR discovery
+discovery	GSE165177	GSE165177_Log2_RPM_Transient_reprogramming_part2_170621.txt.gz	https://ftp.ncbi.nlm.nih.gov/geo/series/GSE165nnn/GSE165177/suppl/GSE165177_Log2_RPM_Transient_reprogramming_part2_170621.txt.gz	2022-04-19	no	MPTR discovery part 2
+discovery	GSE176206	GSE176206_adipo_screen.h5ad.gz	https://ftp.ncbi.nlm.nih.gov/geo/series/GSE176nnn/GSE176206/suppl/GSE176206_adipo_screen.h5ad.gz	2022-06-10	no	factor-screen discovery
+discovery	GSE176206	GSE176206_msc_screen.h5ad.gz	https://ftp.ncbi.nlm.nih.gov/geo/series/GSE176nnn/GSE176206/suppl/GSE176206_msc_screen.h5ad.gz	2022-06-10	no	factor-screen discovery
+discovery	GSE246954	GSE246954_raw_genecounts.xls.gz	https://ftp.ncbi.nlm.nih.gov/geo/series/GSE246nnn/GSE246954/suppl/GSE246954_raw_genecounts.xls.gz	2024-03-21	no	chemical discovery
+discovery-secondary	GSE247179	GSE247179_data_sesame.RDS.gz	https://ftp.ncbi.nlm.nih.gov/geo/series/GSE247nnn/GSE247179/suppl/GSE247179_data_sesame.RDS.gz	2024-03-21	no	methylation sensitivity
+validation	GSE297984	GSE297984_logCPM_2c_7c.csv.gz	https://ftp.ncbi.nlm.nih.gov/geo/series/GSE297nnn/GSE297984/suppl/GSE297984_logCPM_2c_7c.csv.gz	2025-06-10	no	positive challenge
+validation	GSE297233	GSE297233_raw_counts_matrix.csv.gz	https://ftp.ncbi.nlm.nih.gov/geo/series/GSE297nnn/GSE297233/suppl/GSE297233_raw_counts_matrix.csv.gz	2025-08-14	no	OSK bulk sensitivity
+validation	GSE297234	GSM8986586-6593 filtered_feature_bc_matrix.h5 files	https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM8986nnn/	2025-08-14	no	OSKM single-cell trajectory; exact per-sample URLs in validation manifest
+validation	GSE300625	GSE300625_raw_genecounts.csv.gz	https://ftp.ncbi.nlm.nih.gov/geo/series/GSE300nnn/GSE300625/suppl/GSE300625_raw_genecounts.csv.gz	2026-06-22	no	adverse in-vivo challenge
+validation	GSE304042	GSE304042_5_ARPE_single_triple_OSK_30-1011800743.csv.gz	https://ftp.ncbi.nlm.nih.gov/geo/series/GSE304nnn/GSE304042/suppl/GSE304042_5_ARPE_single_triple_OSK_30-1011800743.csv.gz	2026-06-11	no	OSK mechanism sensitivity
+validation	GSE304043	GSE304043_6_mRPE_Old-GFP_Old-GSTA4_merged_featureCounts.csv.gz	https://ftp.ncbi.nlm.nih.gov/geo/series/GSE304nnn/GSE304043/suppl/GSE304043_6_mRPE_Old-GFP_Old-GSTA4_merged_featureCounts.csv.gz	2026-06-11	no	GSTA4 test

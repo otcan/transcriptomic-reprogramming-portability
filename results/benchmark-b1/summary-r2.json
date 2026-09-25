@@ -1,0 +1,44 @@
+{
+  "adaptive_post_primary_failure": true,
+  "methods": [
+    "ridge_rank_a1",
+    "elastic_net_rank",
+    "pca50_ridge",
+    "meta_effect_projection",
+    "gse113957_only_ridge",
+    "gse226189_only_ridge"
+  ],
+  "contrast_count": 184,
+  "favourable_family_count": 8,
+  "outer_cv_pooled_spearman": {
+    "gse113957_only_ridge": -0.6104703897465925,
+    "gse226189_only_ridge": -0.36476481338362987,
+    "meta_effect_projection": -0.3140637681358926,
+    "pca50_ridge": -0.7130439071027083,
+    "ridge_rank_a1": -0.7301624388033175
+  },
+  "methods_orienting_both_age_controls": 5,
+  "median_pairwise_method_sign_agreement": 0.7445652173913043,
+  "transportability_gate_pass": false,
+  "method_favourable_family_fractions": {
+    "ridge_rank_a1": 0.375,
+    "pca50_ridge": 0.375,
+    "meta_effect_projection": 0.625,
+    "gse113957_only_ridge": 0.25,
+    "gse226189_only_ridge": 0.375
+  },
+  "methods_at_or_above_80_percent_families": 0,
+  "universal_direction_gate_pass": false,
+  "median_pairwise_family_gene_effect_spearman": 0.0538123679329506,
+  "median_leave_one_family_out_gene_consensus_spearman": 0.1969951702374822,
+  "revision": "r2_training_only_cv_and_constant_elastic_exclusion",
+  "evaluable_methods": [
+    "ridge_rank_a1",
+    "pca50_ridge",
+    "meta_effect_projection",
+    "gse113957_only_ridge",
+    "gse226189_only_ridge"
+  ],
+  "excluded_method": "elastic_net_rank",
+  "excluded_method_reason": "Final alpha 10.0/l1_ratio 0.1 model has zero non-zero coefficients and constant intervention outputs."
+}

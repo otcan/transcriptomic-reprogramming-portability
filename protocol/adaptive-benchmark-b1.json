@@ -1,0 +1,36 @@
+{
+  "defined": "2026-09-25",
+  "status": "lock_before_comparator_outputs",
+  "seed": 1729,
+  "common_features": 10532,
+  "representation": "within_sample_percentile_rank",
+  "minimum_feature_coverage": 0.60,
+  "methods": [
+    "ridge_rank_a1",
+    "elastic_net_rank",
+    "pca50_ridge",
+    "meta_effect_projection",
+    "gse113957_only_ridge",
+    "gse226189_only_ridge"
+  ],
+  "elastic_net": {
+    "l1_ratio": [0.1, 0.5, 0.9],
+    "alphas_log10_min": -4,
+    "alphas_log10_max": 1,
+    "n_alphas": 25,
+    "inner_folds": 5,
+    "max_iter": 50000
+  },
+  "pca_ridge": {
+    "components_max": 50,
+    "ridge_alpha_log10": [-2, -1.5, -1, -0.5, 0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5, 5.5, 6]
+  },
+  "transportability_gate": {
+    "minimum_methods_with_both_age_controls": 4,
+    "minimum_median_pairwise_sign_agreement": 0.80
+  },
+  "universal_direction_gate": {
+    "minimum_methods": 4,
+    "minimum_favourable_family_fraction": 0.80
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "checks": [
+    "A1 feature count and three outer-CV age correlations",
+    "MPTR four-axis estimates and intervals",
+    "chemical-discovery age control and 2c/7c effects",
+    "human chemical validation contains eight effects, six negative",
+    "human OSKM trajectory and baseline age control",
+    "adverse in-vivo and GSTA4 validation estimates",
+    "known-target universe, missingness, percentiles, and null result",
+    "B1 model count, contrasts, controls, gates, and concordance summaries",
+    "elastic-net selected hyperparameters and zero non-zero coefficients",
+    "high-risk unsupported affirmative phrases absent"
+  ],
+  "check_count": 10,
+  "sources": [
+    "results/adaptive-y-a1/summary.json",
+    "results/adaptive-discovery-a1/",
+    "results/validation/",
+    "results/target-evaluation/",
+    "results/benchmark-b1/summary-r2.json"
+  ]
+}

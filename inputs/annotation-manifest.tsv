@@ -1,0 +1,8 @@
+file	url	release_or_date	bytes	sha256	primary_use
+homologene_build68.data	https://ftp.ncbi.nlm.nih.gov/pub/HomoloGene/build68/homologene.data	2014-05-06	13803677	bd03eb39ae54eb24f1988306a619d11353a69fbcbe86eb94231c15c9f33c7014	primary human-mouse one-to-one orthology
+go-basic-2024-01-17.obo	https://release.geneontology.org/2024-01-17/ontology/go-basic.obo	2024-01-17	31183660	e078d5406cc78976941578e984e0e3809bc6f4642f8fce404990f5f7c19b0c07	GO graph
+goa_human-2024-01-17.gaf.gz	https://release.geneontology.org/2024-01-17/annotations/goa_human.gaf.gz	2024-01-17	11727601	3ccc83fe9e18f8c41374787b0cd3b4fb9737a849096b1be5b9f1d3de9ffa7d27	human D programmes
+mgi-2024-01-17.gaf.gz	https://release.geneontology.org/2024-01-17/annotations/mgi.gaf.gz	2024-01-17	12419545	a7084469cc2bc6c4747b66b8479bec897b86e7bcd67e45fc578540aad7cd4273	mouse D programmes
+Homo_sapiens.GRCh38.111.gtf.gz	https://ftp.ensembl.org/pub/release-111/gtf/homo_sapiens/Homo_sapiens.GRCh38.111.gtf.gz	Ensembl 111	54350257	a52356765a41264e17a2076aff1abab703ec3ba239b78f88560756e85c169831	human identifier and biotype annotation
+Mus_musculus.GRCm39.111.gtf.gz	https://ftp.ensembl.org/pub/release-111/gtf/mus_musculus/Mus_musculus.GRCm39.111.gtf.gz	Ensembl 111	32079103	808193f58062628c11786fd4d1b32492e58764490f88d6d74f44516b4b1386fb	mouse identifier and biotype annotation
+

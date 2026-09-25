@@ -1,0 +1,11 @@
+accession,role,species,modality,biological_unit,primary_use,first_public
+GSE113957,discovery reference,human,bulk RNA-seq,donor,chronological-age reference A,2018-11-16
+GSE226189,discovery reference,human,bulk RNA-seq,donor,chronological-age reference B,2023-07-06
+GSE165176/GSE165177,discovery,human,bulk RNA-seq,donor/experiment/duration,identity-pluripotency anchors and MPTR,2022-04-19
+GSE176206,discovery,mouse,single-cell RNA-seq,animal-derived experimental pool,factor screens and source-specific identity,2022-06-10
+GSE246954/GSE247199,discovery,mouse,multi-omics with bulk RNA-seq,independent culture replicate,chemical reprogramming and age control,2024-03-21
+GSE297984,temporal validation,human,bulk RNA-seq,donor line with nested cultures,two-donor-line 2c/7c challenge,2025-06-10
+GSE297233/GSE297234,temporal validation,human,bulk/single-cell RNA-seq,donor line or independent culture,OSK/O4YRSK and OSKM trajectory,2025-08-14
+GSE300625,temporal validation,mouse,bulk RNA-seq,animal within tissue,adverse in-vivo 7c challenge,2026-06-22
+GSE304042/GSE304043/GSE304044,temporal validation,human/mouse,bulk RNA-seq,independent culture/animal,RPE OSK and GSTA4 challenge,2026-06-11
+GSE276656,unused secondary validation,mouse,single-nucleus RNA/ATAC,animal,predeclared secondary cell-type sensitivity not required after primary failure,2026-02-10

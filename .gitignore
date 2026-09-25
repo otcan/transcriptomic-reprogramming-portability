@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+.pytest_cache/
+*.pyc
+inputs/discovery-data/
+inputs/validation-data/
+inputs/annotations/
+inputs/metadata/
+data/working/
+runs/

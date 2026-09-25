@@ -1,0 +1,16 @@
+{
+  "version": "A1",
+  "feature_biotype": "protein_coding",
+  "feature_rule": "present after protocol-v1.0 expression filtering in both age references",
+  "feature_transform": "within-sample percentile rank",
+  "outcome_transform": "within-cohort z score using sample standard deviation",
+  "model": "ridge regression with intercept",
+  "alpha_grid": [0.01, 0.03162277660168379, 0.1, 0.31622776601683794, 1.0, 3.1622776601683795, 10.0, 31.622776601683793, 100.0, 316.22776601683796, 1000.0, 3162.2776601683795, 10000.0, 31622.776601683792, 100000.0, 316227.7660168379, 1000000.0],
+  "alpha_selection": "RidgeCV generalized leave-one-out cross-validation",
+  "outer_folds": 5,
+  "outer_fold_seed": 1729,
+  "minimum_feature_coverage": 0.60,
+  "missing_feature_rule": "frozen training feature mean",
+  "score_direction": "Y_A1 equals negative ridge prediction"
+}
+
