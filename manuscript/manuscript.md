@@ -342,16 +342,17 @@ participant-linked records.
 
 All expression data are public under the GEO accessions listed above. The submission bundle includes
 exact source URLs, retrieval dates, file sizes and SHA-256 hashes. Raw matrices are not redistributed.
-The manuscript repository is available at
+The reviewed manuscript repository will be made publicly available at
 <https://github.com/Metastatebio/transcriptomic-reprogramming-portability>. The immutable archival
 DOI will be inserted before submission: **[ZENODO DOI — REQUIRED BEFORE SUBMISSION]**.
 
 # Code availability
 
-The complete analysis and figure code, frozen configurations, tests and aggregate result tables are
-available at <https://github.com/Metastatebio/transcriptomic-reprogramming-portability>. Immutable
-commits and manifests are included. No language model or post-cutoff biological database was used
-as a model feature or to rank targets.
+The complete analysis and figure code, frozen configurations, tests and aggregate result tables will
+be made publicly available at
+<https://github.com/Metastatebio/transcriptomic-reprogramming-portability>. Immutable commits and
+manifests are included. No language model or post-cutoff biological database was used as a model
+feature or to rank targets.
 
 # Acknowledgements
 
