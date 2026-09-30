@@ -42,16 +42,22 @@ FAMILY_LABELS = {
     "GSE297984_chemical": "Human 2c/7c",
     "GSE304042_ARPE_OSK": "RPE OSK",
     "GSE304043_GSTA4": "RPE GSTA4",
+    "GSE165177_failed": "Failed MPTR",
+    "GSE176206_other_factors": "Other factor screens",
+    "GSE246954_age": "Mouse age control",
+    "GSE297234_age": "Human age control",
+    "GSE297234_day10": "OSKM day 10",
+    "GSE300625_adverse": "Adverse 7c",
 }
 
 mpl.rcParams.update(
     {
         "font.family": "DejaVu Sans",
-        "font.size": 8,
-        "axes.titlesize": 9,
-        "axes.labelsize": 8,
-        "xtick.labelsize": 7,
-        "ytick.labelsize": 7,
+        "font.size": 8.5,
+        "axes.titlesize": 9.5,
+        "axes.labelsize": 8.5,
+        "xtick.labelsize": 7.5,
+        "ytick.labelsize": 7.5,
         "figure.dpi": 150,
         "savefig.dpi": 600,
         "pdf.fonttype": 42,
@@ -73,7 +79,7 @@ PALE = "#F2F4F7"
 
 
 def panel_label(ax: plt.Axes, label: str) -> None:
-    ax.text(-0.08, 1.05, label, transform=ax.transAxes, fontsize=11, fontweight="bold", va="top")
+    ax.text(-0.10, 1.10, label, transform=ax.transAxes, fontsize=11, fontweight="bold", va="top")
 
 
 def save(fig: plt.Figure, stem: str) -> None:
@@ -97,54 +103,68 @@ def box(ax: plt.Axes, xy: tuple[float, float], width: float, height: float, text
 
 
 def figure1_design() -> None:
-    fig = plt.figure(figsize=(7.2, 6.2))
-    grid = fig.add_gridspec(3, 1, height_ratios=[1.2, 0.9, 1.0], hspace=0.44)
+    fig = plt.figure(figsize=(7.2, 5.6))
+    grid = fig.add_gridspec(3, 1, height_ratios=[1.15, 0.85, 1.0], hspace=0.55)
     ax = fig.add_subplot(grid[0])
-    ax.set_axis_off()
     panel_label(ax, "a")
-    ax.set_title("Temporally locked construction, external challenge and adaptive benchmark", loc="left", pad=8)
-    box(ax, (0.01, 0.52), 0.27, 0.30, "Discovery through 2024\n2 human age references\n3 reprogramming families", BLUE)
-    box(ax, (0.365, 0.52), 0.22, 0.30, "Freeze\nprotocol-v1.0\nthen discovery-a1-v1", GREY)
-    box(ax, (0.68, 0.52), 0.30, 0.30, "2025–2026 validation\nchemical, OSK/OSKM, adverse 7c,\nGSTA4", ORANGE)
-    ax.annotate("", xy=(0.36, 0.67), xytext=(0.285, 0.67), arrowprops=dict(arrowstyle="->", lw=1.2))
-    ax.annotate("", xy=(0.675, 0.67), xytext=(0.59, 0.67), arrowprops=dict(arrowstyle="->", lw=1.2))
-    box(ax, (0.365, 0.08), 0.30, 0.24, "Primary claim failed\nNo refitting or endpoint substitution", RED)
-    box(ax, (0.70, 0.08), 0.28, 0.24, "Post-primary B1\n6 attempted methods; 5 evaluable\n184 contrasts; 8 families", GREEN)
-    ax.annotate("", xy=(0.51, 0.34), xytext=(0.79, 0.51), arrowprops=dict(arrowstyle="->", lw=1.0))
-    ax.annotate("", xy=(0.695, 0.20), xytext=(0.67, 0.20), arrowprops=dict(arrowstyle="->", lw=1.0))
-    ax.text(0.01, 0.02, "Known publication conclusions were not blinded; expression matrices were held until the frozen discovery release.", fontsize=6.8, color=GREY)
+    ax.set_title("Temporally separated construction, challenge and robustness analysis", loc="left", pad=8)
+    x = np.arange(5)
+    ax.plot(x, np.zeros(5), color="#98A2B3", lw=1.4, zorder=1)
+    colors = [BLUE, GREY, ORANGE, BLUE, PURPLE]
+    ax.scatter(x, np.zeros(5), s=95, color=colors, edgecolor="white", linewidth=1.2, zorder=2)
+    top = ["Reference data\nthrough 2024", "Protocol and\ndiscovery freeze", "2025–2026\ntemporal challenge",
+           "Adaptive B1\nbenchmark", "Post-review C1\nrobustness"]
+    bottom = ["2 age cohorts", "No outcome refitting", "Primary claim failed",
+              "5 evaluable methods", "Family weighting + Pasta"]
+    for i, (heading, detail) in enumerate(zip(top, bottom)):
+        ax.text(i, 0.17, heading, ha="center", va="bottom", fontsize=7.5, fontweight="semibold")
+        ax.text(i, -0.17, detail, ha="center", va="top", fontsize=6.8, color=GREY)
+    ax.set_xlim(-0.35, 4.35)
+    ax.set_ylim(-0.42, 0.48)
+    ax.set_axis_off()
+    ax.text(0, -0.38, "Publication conclusions were known; temporal separation was neither blinded nor prospective.",
+            fontsize=6.8, color=GREY)
 
     ax = fig.add_subplot(grid[1])
-    ax.set_axis_off()
     panel_label(ax, "b")
-    ax.set_title("The frozen state vector kept distinct biological questions separate", loc="left", pad=8)
+    ax.set_title("Four axes kept distinct biological questions separate", loc="left", pad=8)
     labels = [
-        ("Y", "youth-associated\nchronological-age direction", BLUE),
-        ("I", "retained somatic\nidentity", GREEN),
-        ("P", "endogenous pluripotency /\ndedifferentiation", ORANGE),
-        ("D", "four measured stress /\ndamage programmes", RED),
+        ("Y", "Chronological-age\ndirection", BLUE),
+        ("I", "Somatic\nidentity", SKY),
+        ("P", "Pluripotency /\ndedifferentiation", PURPLE),
+        ("D", "Measured stress /\ndamage programmes", ORANGE),
     ]
     for index, (symbol, desc, color) in enumerate(labels):
-        x = 0.01 + index * 0.247
-        box(ax, (x, 0.23), 0.22, 0.48, f"{symbol}\n{desc}", color)
-    ax.text(0.01, 0.05, "Y is dimensionless and is not an estimate of biological age or years rejuvenated.", fontsize=7, color=GREY)
+        xpos = index
+        ax.text(xpos, 0.61, symbol, ha="center", va="center", fontsize=19, fontweight="bold", color=color)
+        ax.text(xpos, 0.20, desc, ha="center", va="center", fontsize=7.4)
+        if index < 3:
+            ax.axvline(xpos + 0.5, color="#D0D5DD", lw=0.8, ymin=0.15, ymax=0.85)
+    ax.set_xlim(-0.5, 3.5)
+    ax.set_ylim(-0.15, 1.0)
+    ax.set_axis_off()
+    ax.text(-0.45, -0.08, "Y is dimensionless; it is not biological age or years rejuvenated.", fontsize=6.8, color=GREY)
 
     ax = fig.add_subplot(grid[2])
-    ax.set_axis_off()
     panel_label(ax, "c")
-    ax.set_title("Qualification logic used in the final benchmark paper", loc="left", pad=8)
+    ax.set_title("Qualification proceeds from prediction to outcome relevance", loc="left", pad=8)
     steps = [
-        ("1", "Age association", "Held-out donors\nand both cohorts"),
-        ("2", "Control orientation", "Independent young–old\ncontrasts"),
-        ("3", "Intervention portability", "Direction across\nmethods and families"),
-        ("4", "Biological triangulation", "Identity, pluripotency,\nfunction and safety"),
+        ("1", "Age association", "Held-out donors"),
+        ("2", "Control orientation", "Young–old contrasts"),
+        ("3", "Intervention portability", "Methods and families"),
+        ("4", "Outcome triangulation", "State, function, safety"),
     ]
+    ax.plot(np.arange(4), np.repeat(0.56, 4), color="#98A2B3", lw=1.4, zorder=1)
     for i, (num, title, desc) in enumerate(steps):
-        x = 0.01 + i * 0.247
-        box(ax, (x, 0.20), 0.22, 0.55, f"{num}. {title}\n{desc}", [BLUE, GREEN, ORANGE, RED][i])
-        if i < 3:
-            ax.annotate("", xy=(x + 0.245, 0.475), xytext=(x + 0.225, 0.475), arrowprops=dict(arrowstyle="->", lw=1))
-    ax.text(0.01, 0.04, "Success at an earlier level does not establish validity at a later level.", fontsize=7, color=GREY)
+        color = [BLUE, SKY, PURPLE, ORANGE][i]
+        ax.scatter(i, 0.56, s=135, color=color, edgecolor="white", linewidth=1.2, zorder=2)
+        ax.text(i, 0.56, num, ha="center", va="center", color="white", fontsize=8, fontweight="bold", zorder=3)
+        ax.text(i, 0.88, title, ha="center", fontsize=7.5, fontweight="semibold")
+        ax.text(i, 0.18, desc, ha="center", fontsize=6.9, color=GREY)
+    ax.set_xlim(-0.35, 3.35)
+    ax.set_ylim(-0.05, 1.10)
+    ax.set_axis_off()
+    ax.text(-0.32, -0.02, "Success at one level does not establish validity at the next.", fontsize=6.8, color=GREY)
     save(fig, "figure-1-study-design")
 
 
@@ -212,7 +232,7 @@ def figure2_primary() -> None:
     ax = axes[1, 1]
     panel_label(ax, "d")
     ax.plot(traj.day, traj.Y_A1, marker="o", color=BLUE, label="Y_A1")
-    ax.plot(traj.day, traj.I, marker="o", color=GREEN, label="Identity (I)")
+    ax.plot(traj.day, traj.I, marker="s", color=SKY, label="Identity (I)")
     ax.plot(traj.day, traj.P, marker="o", color=ORANGE, label="Pluripotency (P)")
     ax.axhline(0, color="black", lw=0.7)
     ax.axhline(0.05, color=GREY, lw=0.6, ls="--")
@@ -255,7 +275,7 @@ def figure3_benchmark() -> None:
 
     ax = axes[1, 0]
     panel_label(ax, "c")
-    ordered = list(FAMILY_LABELS)
+    ordered = [name for name in FAMILY_LABELS if name in family.index]
     raw = family.loc[ordered, METHODS]
     sign = np.sign(raw)
     annotation = raw.map(lambda x: "+" if x > 0 else ("−" if x < 0 else "0"))
@@ -285,6 +305,8 @@ def figure4_concordance() -> None:
     sign = pd.read_csv(ROOT / "results/benchmark-b1/method-sign-agreement.csv", index_col=0).loc[METHODS, METHODS]
     gene = pd.read_csv(ROOT / "results/benchmark-b1/family-gene-effect-spearman.csv", index_col=0)
     loo = pd.read_csv(ROOT / "results/benchmark-b1/leave-one-family-out-gene-consensus.csv")
+    family_rel = pd.read_csv(ROOT / "results/post-review-c1/family-split-reliability.csv")
+    arm_rel = pd.read_csv(ROOT / "results/post-review-c1/arm-split-reliability.csv")
     fig, axes = plt.subplots(2, 2, figsize=(8.4, 7.2), constrained_layout=True)
 
     ax = axes[0, 0]
@@ -294,7 +316,7 @@ def figure4_concordance() -> None:
     ax.set_yticklabels([METHOD_LABELS[m] for m in METHODS], rotation=0)
     ax.set_xlabel("")
     ax.set_ylabel("")
-    ax.set_title("Method agreement across 184 contrasts")
+    ax.set_title("Method sign agreement (184 contrasts)")
 
     ax = axes[0, 1]
     panel_label(ax, "b")
@@ -304,7 +326,7 @@ def figure4_concordance() -> None:
     ax.set_yticklabels([FAMILY_LABELS.get(x, x) for x in gene.index], rotation=0)
     ax.set_xlabel("")
     ax.set_ylabel("")
-    ax.set_title("Family gene-effect directions are weakly concordant")
+    ax.set_title("Gene-effect similarity across families")
 
     ax = axes[1, 0]
     panel_label(ax, "c")
@@ -314,21 +336,26 @@ def figure4_concordance() -> None:
     ax.set_yticks(range(len(loo)), labels)
     ax.invert_yaxis()
     ax.set_xlabel("LOFO consensus-to-held-family Spearman")
-    ax.set_title("A cross-family consensus transfers only weakly")
+    ax.set_title("Cross-family consensus transfer")
     ax.text(0.98, 0.04, "Median = 0.197", transform=ax.transAxes, ha="right", fontsize=7)
 
     ax = axes[1, 1]
     panel_label(ax, "d")
-    ax.set_axis_off()
-    ax.set_title("What the benchmark supports", loc="left")
-    statements = [
-        (GREEN, "Supported", "Age-associated directions orient\nsimple age controls."),
-        (ORANGE, "Not portable", "Signs and family calls diverge\nunder reprogramming."),
-        (RED, "Not established", "Biological age reversal, causality,\nefficacy or safety."),
-    ]
-    for i, (color, title, desc) in enumerate(statements):
-        y = 0.72 - i * 0.27
-        box(ax, (0.02, y), 0.94, 0.18, f"{title}\n{desc}", color)
+    family_values = family_rel.loc[family_rel.status == "ESTIMATED", "median_spearman"].to_numpy()
+    arm_values = arm_rel["median_spearman"].to_numpy()
+    rng = np.random.default_rng(44)
+    ax.scatter(np.repeat(0, len(family_values)) + rng.uniform(-0.08, 0.08, len(family_values)),
+               family_values, s=42, color=BLUE, edgecolor="white", linewidth=0.6, zorder=3)
+    ax.scatter(np.repeat(1, len(arm_values)) + rng.uniform(-0.08, 0.08, len(arm_values)),
+               arm_values, s=42, marker="s", color=PURPLE, edgecolor="white", linewidth=0.6, zorder=3)
+    ax.scatter(2, 0.0538123679329506, s=58, marker="D", color=ORANGE, edgecolor="white", linewidth=0.6, zorder=3)
+    for xpos, values in [(0, family_values), (1, arm_values)]:
+        ax.hlines(np.median(values), xpos - 0.18, xpos + 0.18, color="black", lw=1.4)
+    ax.axhline(0, color="black", lw=0.7)
+    ax.set_xticks([0, 1, 2], ["Family split\n(n=4)", "Arm split\n(n=8)", "Cross-family\nmedian"])
+    ax.set_ylim(-0.12, 1.0)
+    ax.set_ylabel("Raw Spearman correlation")
+    ax.set_title("Within-context reliability versus cross-family similarity")
     save(fig, "figure-4-concordance-and-interpretation")
 
 
@@ -344,46 +371,53 @@ def figure5_post_review() -> None:
 
     ax = axes[0, 0]
     panel_label(ax, "a")
-    values = [summary["contrast_weighted_median_pairwise_agreement"], summary["equal_family_median_pairwise_agreement"]]
-    ax.bar([0, 1], values, color=[SKY, BLUE], width=0.62)
     bootstrap = summary["cluster_bootstrap"]
+    values = [summary["contrast_weighted_median_pairwise_agreement"], summary["equal_family_median_pairwise_agreement"]]
+    ax.scatter([0, 1], values, s=70, color=[SKY, BLUE], edgecolor="white", linewidth=0.8, zorder=3,
+               label="Observed")
     ax.errorbar(1, bootstrap["median"],
                 yerr=[[bootstrap["median"] - bootstrap["lower_95"]],
                       [bootstrap["upper_95"] - bootstrap["median"]]],
-                color="black", capsize=4, lw=1.2, marker="o", ms=3)
+                color="black", capsize=5, lw=1.2, marker="_", ms=10, label="Family bootstrap 95% interval")
     ax.axhline(0.8, color=ORANGE, ls="--", lw=1, label="Locked 0.80 gate")
     ax.set_xticks([0, 1], ["Contrast-\nweighted", "Equal-family"])
     ax.set_ylim(0.45, 0.86)
     ax.set_ylabel("Median pairwise sign agreement")
-    ax.legend(frameon=False, fontsize=6)
-    ax.set_title("Family weighting lowers agreement")
+    ax.legend(frameon=False, fontsize=6.2, loc="lower left")
+    ax.set_title("Substantial agreement remains below the locked gate")
 
     ax = axes[0, 1]
     panel_label(ax, "b")
-    ax.plot(range(len(loo)), loo.equal_family_median_agreement, marker="o", color=BLUE, lw=1)
-    ax.axhline(0.8, color=ORANGE, ls="--", lw=1)
-    ax.set_ylim(0.45, 0.86)
-    ax.set_xticks(range(len(loo)), [FAMILY_LABELS.get(x, x.replace("GSE", "")) for x in loo.held_family],
-                  rotation=55, ha="right")
-    ax.set_ylabel("Equal-family median agreement")
+    loo_labels = [FAMILY_LABELS.get(x, x.replace("GSE", "")) for x in loo.held_family]
+    y = np.arange(len(loo))
+    ax.hlines(y, 0.45, loo.equal_family_median_agreement, color="#D0D5DD", lw=1)
+    ax.scatter(loo.equal_family_median_agreement, y, color=BLUE, s=34, zorder=3)
+    ax.axvline(0.8, color=ORANGE, ls="--", lw=1)
+    ax.set_xlim(0.45, 0.86)
+    ax.set_yticks(y, loo_labels)
+    ax.invert_yaxis()
+    ax.set_xlabel("Equal-family median agreement")
     ax.set_title("No single family explains the result")
 
     ax = axes[1, 0]
     panel_label(ax, "c")
-    ax.plot(coverage.coverage_threshold, coverage.contrast_weighted_median_agreement,
+    categories = ["60%", "70%", "80%", "90%", "Common\n8,427 genes"]
+    x = np.arange(len(categories))
+    ax.plot(x[:4], coverage.contrast_weighted_median_agreement,
             marker="o", color=SKY, label="Contrast-weighted")
-    ax.plot(coverage.coverage_threshold, coverage.equal_family_median_agreement,
+    ax.plot(x[:4], coverage.equal_family_median_agreement,
             marker="s", color=BLUE, label="Equal-family")
     common = summary["common_feature_sensitivity"]
-    ax.scatter([0.825], [common["contrast_weighted_median_agreement"]], marker="^", color=PURPLE,
-               label="8,427-gene common refit")
-    ax.scatter([0.825], [common["equal_family_median_agreement"]], marker="v", color=PURPLE)
+    ax.scatter([x[4]], [common["contrast_weighted_median_agreement"]], marker="o", color=SKY, s=44)
+    ax.scatter([x[4]], [common["equal_family_median_agreement"]], marker="s", color=BLUE, s=44)
+    ax.axvline(3.5, color="#D0D5DD", lw=0.8)
     ax.axhline(0.8, color=ORANGE, ls="--", lw=1)
-    ax.set_xlim(0.575, 0.925)
+    ax.set_xlim(-0.35, 4.35)
     ax.set_ylim(0.45, 0.86)
-    ax.set_xlabel("Minimum feature coverage")
+    ax.set_xticks(x, categories)
+    ax.set_xlabel("Eligibility threshold or separate refit")
     ax.set_ylabel("Median agreement")
-    ax.legend(frameon=False, fontsize=6)
+    ax.legend(frameon=False, fontsize=6.2, loc="lower left")
     ax.set_title("Coverage choices do not restore portability")
 
     ax = axes[1, 1]
@@ -432,7 +466,7 @@ def supplementary_figures() -> None:
     long = g.melt(id_vars=[column for column in g.columns if column not in cols], value_vars=cols,
                   var_name="axis", value_name="delta")
     fig, ax = plt.subplots(figsize=(5.2, 3.4))
-    sns.stripplot(data=long, x="axis", y="delta", hue="axis", palette=[BLUE, GREEN, ORANGE, RED],
+    sns.stripplot(data=long, x="axis", y="delta", hue="axis", palette=[BLUE, SKY, PURPLE, ORANGE],
                   jitter=0.08, size=7, legend=False, ax=ax)
     ax.axhline(0, color="black", lw=0.8)
     ax.axhline(0.05, color=GREY, lw=0.6, ls="--")

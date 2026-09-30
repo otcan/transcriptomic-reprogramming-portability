@@ -145,7 +145,10 @@ benchmark families lowered median pairwise agreement to 0.623. A 10,000-draw clu
 resampled families gave a percentile interval of 0.515–0.738, and leave-one-family-out estimates
 ranged from 0.593 to 0.652 (Fig. 5a,b). The original contrast-weighted statistic is therefore not
 presented as 184 independent experiments; the family-weighted result is the more conservative
-summary.
+summary. Neither estimate indicates random or complete discordance: the five models retained a
+meaningful shared directional component. The qualification failure is narrower—agreement was
+insufficient for the models to serve as interchangeable or universal scalar readouts under the
+locked criterion.
 
 The divergence was visible at the study-family level (Fig. 3c). MPTR was positive for every method,
 whereas the human chemical family was negative for every method. Other families split by model. For
@@ -196,7 +199,8 @@ scalar-score and gene-effect levels.
 
 ![Cross-method and cross-family concordance. **a,** Pairwise method sign agreement across 184
 contrasts. **b,** Spearman correlations between family-mean gene effects. **c,** Leave-one-family-out
-consensus correlations. **d,** Supported and unsupported interpretation.](figures/figure-4-concordance-and-interpretation.png){width=100%}
+consensus correlations. **d,** Raw within-family and within-contrast split-half reliability compared
+with the cross-family median gene-effect correlation.](figures/figure-4-concordance-and-interpretation.png){width=100%}
 
 ## Robustness and a contemporary exploratory comparator
 
@@ -218,9 +222,10 @@ complete sample-level audit of all 21 Pasta training datasets was not possible f
 materials. We excluded the contemporary tAge model from this commercial-affiliation release because
 its public licence is restricted to non-commercial academic use [13].
 
-![Post-review robustness analyses. **a,** Contrast-weighted and equal-family method agreement; the
-point and whisker show the family-cluster bootstrap median and 95% interval. **b,** Leave-one-family-
-out agreement. **c,** Feature-coverage thresholds and the common-feature refit. **d,** Historical
+![Post-review robustness analyses. **a,** Observed contrast-weighted and equal-family method
+agreement; the whisker shows the family-cluster bootstrap 95% interval around its median. **b,**
+Leave-one-family-out agreement. **c,** Feature-coverage thresholds and the separately displayed
+common-feature refit. **d,** Historical
 models and exploratory Pasta signs across eight source-labelled favourable families. Blue denotes a
 positive youth-oriented effect and orange a negative effect; signs provide redundant encoding.](figures/figure-5-post-review-robustness.png){width=100%}
 
@@ -230,7 +235,9 @@ Our central result is a qualification failure with a useful boundary: five trans
 chronological-age directions recognized young–old contrasts yet were not sufficiently portable
 across the evaluated partial-reprogramming interventions. This is not evidence that the source
 interventions lack biological or functional effects. It shows that age prediction and intervention
-measurement are different validation problems.
+measurement are different validation problems. The observed agreement is substantial rather than
+negligible, supporting a shared component across models; the remaining context dependence prevents
+that component from being interpreted as a universally stable rejuvenation direction.
 
 Recent large-scale work reaches a compatible conclusion from a different direction. Universal
 transcriptomic clocks trained on more than 11,000 samples found that chronological clocks correlated
@@ -415,6 +422,14 @@ within-sample ranks and frozen ridge coefficients [14]. Age-shift predictions we
 that positive values denote a youth-associated direction. Package files and their SHA-256 hashes,
 implementation validation and the licensing decision for tAge are recorded in the release audit.
 
+## AI-assisted research and writing
+
+OpenAI Codex was used under the author's direction for code drafting, analysis orchestration,
+literature organization and manuscript-language development. The author defined the scientific
+questions and claim boundaries, reviewed the analysis code and outputs, verified citations and
+numerical claims, revised the manuscript and accepts full responsibility for its content. AI systems
+were not treated as authors or independent sources of evidence.
+
 ## Software and reproducibility
 
 Analyses used Python 3.12 with NumPy, pandas, SciPy, scikit-learn, h5py, anndata, rdata, matplotlib
@@ -444,11 +459,6 @@ feature or to rank targets.
 
 This research received no external funding. Computational resources were provided by Metastate Bio
 Inc.
-
-OpenAI Codex was used under human direction to assist with code drafting, analysis orchestration,
-literature organization and manuscript drafting. The authors inspected the source data, code,
-computations, citations, figures and claims and retain full responsibility for the work and its
-conclusions.
 
 # Author contributions
 
