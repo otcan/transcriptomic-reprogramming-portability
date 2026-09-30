@@ -3,13 +3,13 @@ message: "If you use this code or evidence release, cite the archived release an
 title: "Transcriptomic partial-reprogramming portability benchmark"
 type: software
 version: 1.0.0
-date-released: 2026-09-25
+date-released: 2026-09-30
 authors:
   - family-names: "Ünver"
     given-names: "Oğuzcan"
     orcid: "https://orcid.org/0009-0007-2023-5084"
     affiliation: "Metastate Bio Inc."
-repository-code: "https://github.com/Metastatebio/transcriptomic-reprogramming-portability"
+repository-code: "https://github.com/otcan/transcriptomic-reprogramming-portability"
 license: Apache-2.0
 keywords:
   - aging

@@ -1,7 +1,9 @@
 {
-  "title": "Transcriptomic partial-reprogramming portability benchmark",
-  "upload_type": "software",
-  "description": "Code, frozen protocols, aggregate results, figures and manuscript sources for a failure-preserving benchmark of chronological-age transcriptomic directions across partial-reprogramming studies.",
+  "title": "Chronological-age transcriptomic directions are not portable scalar readouts of partial reprogramming",
+  "upload_type": "publication",
+  "publication_type": "preprint",
+  "publication_date": "2026-09-30",
+  "description": "Single-author preprint and reproducibility release for a failure-preserving benchmark of chronological-age transcriptomic directions across partial-reprogramming studies. This work has not been peer reviewed.",
   "creators": [
     {
       "name": "Ünver, Oğuzcan",
@@ -16,6 +18,13 @@
     "biomarker qualification",
     "reproducible research"
   ],
-  "license": "other-open",
-  "notes": "Source code is Apache-2.0; manuscripts, protocols, figures and newly authored aggregate tables are CC BY 4.0. Third-party source data are excluded. Replace this draft with the final deposition metadata and DOI only after author approval."
+  "license": "cc-by-4.0",
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/otcan/transcriptomic-reprogramming-portability",
+      "relation": "isSupplementedBy",
+      "resource_type": "software"
+    }
+  ],
+  "notes": "Preprint — not peer reviewed. Source code is Apache-2.0; manuscripts, protocols, figures and newly authored aggregate tables are CC BY 4.0. Third-party source data are excluded. Publication remains subject to the author's approval."
 }

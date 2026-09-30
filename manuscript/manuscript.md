@@ -2,7 +2,7 @@
 title: "Chronological-age transcriptomic directions are not portable scalar readouts of partial reprogramming"
 author:
   - "Oğuzcan Ünver"
-date: "25 September 2026"
+date: "30 September 2026"
 geometry: margin=1in
 fontsize: 10pt
 colorlinks: true
@@ -10,8 +10,8 @@ linkcolor: blue
 urlcolor: blue
 ---
 
-**Article type:** Analysis  
-**Target journal:** *Nature Aging*  
+**Article type:** Preprint / research report  
+**Status:** **Preprint — not peer reviewed.**  
 **Affiliation:** Metastate Bio Inc, Wilmington, Delaware, USA  
 **Corresponding author:** Oğuzcan Ünver; can@metastate.bio; ORCID:
 0009-0007-2023-5084
@@ -342,15 +342,15 @@ participant-linked records.
 
 All expression data are public under the GEO accessions listed above. The submission bundle includes
 exact source URLs, retrieval dates, file sizes and SHA-256 hashes. Raw matrices are not redistributed.
-The reviewed manuscript repository will be made publicly available at
-<https://github.com/Metastatebio/transcriptomic-reprogramming-portability>. The immutable archival
-DOI will be inserted before submission: **[ZENODO DOI — REQUIRED BEFORE SUBMISSION]**.
+The reviewed manuscript repository is prepared for public release at
+<https://github.com/otcan/transcriptomic-reprogramming-portability>. The immutable archival DOI
+will be added to the public record when the approved release is deposited.
 
 # Code availability
 
-The complete analysis and figure code, frozen configurations, tests and aggregate result tables will
-be made publicly available at
-<https://github.com/Metastatebio/transcriptomic-reprogramming-portability>. Immutable commits and
+The complete analysis and figure code, frozen configurations, tests and aggregate result tables are
+prepared for public release at
+<https://github.com/otcan/transcriptomic-reprogramming-portability>. Immutable commits and
 manifests are included. No language model or post-cutoff biological database was used as a model
 feature or to rank targets.
 
@@ -360,7 +360,7 @@ This research received no external funding. Computational resources were provide
 Inc.
 
 OpenAI Codex was used under human direction to assist with code drafting, analysis orchestration,
-literature organization and manuscript drafting. The authors inspected the source data, code,
+literature organization and manuscript drafting. The author inspected the source data, code,
 computations, citations, figures and claims and retain full responsibility for the work and its
 conclusions.
 

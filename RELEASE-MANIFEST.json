@@ -1,6 +1,6 @@
 {
-  "release": "v1.0.0-prepublication",
-  "public_repository": "https://github.com/Metastatebio/transcriptomic-reprogramming-portability",
+  "release": "v1.0.0-approval-candidate",
+  "public_repository": "https://github.com/otcan/transcriptomic-reprogramming-portability",
   "raw_data_included": false,
   "source_unit_identifiers_in_public_contrast_table": false,
   "file_count_excluding_manifest": 140,
@@ -12,8 +12,8 @@
     },
     {
       "path": "CITATION.cff",
-      "bytes": 640,
-      "sha256": "59fc6d459836f42d49232e44e8a11f673b38d62a62b48c3f739c8500c3f23fab"
+      "bytes": 633,
+      "sha256": "2a2e5227ebd8b3ee9d2558e1da793b013ccb8255522f3a0f60be2ae99949d965"
     },
     {
       "path": "LICENSE",
@@ -32,8 +32,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 3194,
-      "sha256": "fffce1fd40da900d2585dcaefbd92f149970846843528d10005beef85dc3ffae"
+      "bytes": 3252,
+      "sha256": "fc5514d56a81486f7b81fe0073da41ee9a29cc36bf7e2721788873a3ff50b368"
     },
     {
       "path": "REPRODUCIBILITY.md",
@@ -282,8 +282,8 @@
     },
     {
       "path": "manuscript/manuscript.md",
-      "bytes": 30419,
-      "sha256": "7ec49619ae50aeb24f3432f60135d03d316a3b7628aa19ff96593c8664c71047"
+      "bytes": 30424,
+      "sha256": "ab7773aede3b011e6cc5a537140bcffaf6762c7fbd555337b17904a87d897e6d"
     },
     {
       "path": "manuscript/outline.md",
@@ -293,7 +293,7 @@
     {
       "path": "manuscript/supplementary-information.md",
       "bytes": 14476,
-      "sha256": "d11c66e2a0f5c19274eb9c1bcec0468bfbad69ad1d1c9e6d3b5a7e1d7971f399"
+      "sha256": "4c5c11db84f5362992f9ea10cb8c34dd82b16204aab4060df8e8fb5ce28afe62"
     },
     {
       "path": "manuscript/tables/supplementary-table-1-datasets.csv",
@@ -327,23 +327,23 @@
     },
     {
       "path": "paper/manuscript.docx",
-      "bytes": 2869564,
-      "sha256": "27399f6e11be0b94a89ac1cc2419b6bd01e05f408165b6c434541f7213fc0c81"
+      "bytes": 2869519,
+      "sha256": "2cfaba528b49a949953473a25ca3f9105f46d45eeda3ac7c8219a50081ced9f2"
     },
     {
       "path": "paper/manuscript.pdf",
-      "bytes": 3175631,
-      "sha256": "46f216584bb5ba4b740e44463a4882ea946bbdb92ae1a190dc970c9fe332f194"
+      "bytes": 3175154,
+      "sha256": "52bd6b778a71b18254f0c80d329f59c071ee78d5eced101c96e668c66b5edb01"
     },
     {
       "path": "paper/supplement.docx",
-      "bytes": 398067,
-      "sha256": "964819ac9ea5f5f929c8e640321ff23285701dce29d653fbdcb0eefb8bac3820"
+      "bytes": 398068,
+      "sha256": "bc00960809bc87393bba9669ef2071ffc7543ece6d63f213fee4b356df0f95c9"
     },
     {
       "path": "paper/supplement.pdf",
-      "bytes": 567293,
-      "sha256": "3b9d5d6e43a3cbce7ff53817889074dbac359e4eddf2471714972e8bb9da6fc8"
+      "bytes": 567289,
+      "sha256": "bfeebfb2dd059534c68d07a6d8973e0998997ca3f623a0cb2ce52ed71e196621"
     },
     {
       "path": "preregistration.md",
@@ -702,8 +702,8 @@
     },
     {
       "path": "zenodo-draft.json",
-      "bytes": 896,
-      "sha256": "d4455fdea4a0e4c6ad0990859632c8339077ca44fb676334c48cc11ad2dcbba1"
+      "bytes": 1227,
+      "sha256": "4de2decd7386ad0f2c149faa9f8f0d83caf2cc48882b907c4107557cda8d226a"
     }
   ]
 }

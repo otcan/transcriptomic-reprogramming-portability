@@ -17,9 +17,11 @@ was youthward in at least 80% of eight source-labelled favourable families. The 
 is therefore non-portability in the evaluated datasets—not absence of functional, epigenetic or
 other biological effects in the source studies.
 
+**Publication status:** Preprint — not peer reviewed.
+
 ## Start here
 
-- `paper/manuscript.pdf` — submission manuscript.
+- `paper/manuscript.pdf` — single-author preprint.
 - `paper/supplement.pdf` — supplementary information.
 - `manuscript/` — editable source, figures and publication tables.
 - `REPRODUCIBILITY.md` — environment, inputs and execution order.
