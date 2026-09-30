@@ -1,0 +1,7 @@
+dimension,stratum,family_count,median_pairwise_sign_agreement,minimum_pairwise_sign_agreement,maximum_pairwise_sign_agreement
+species,human,5,0.7,0.6,1.0
+species,mouse,3,0.6666666666666666,0.3333333333333333,1.0
+intervention,chemical,2,1.0,0.5,1.0
+intervention,genetic,6,0.6666666666666666,0.5,0.8333333333333334
+context,fibroblast,5,0.8,0.4,1.0
+context,retinal_pigment_epithelium,2,0.5,0.0,1.0

@@ -1,0 +1,11 @@
+method_1,method_2,agreement,families
+gse113957_only_ridge,gse226189_only_ridge,0.581305599162742,14
+meta_effect_projection,gse113957_only_ridge,0.5479297488226059,14
+meta_effect_projection,gse226189_only_ridge,0.6001929618001046,14
+pca50_ridge,gse113957_only_ridge,0.5817634746206174,14
+pca50_ridge,gse226189_only_ridge,0.6110020931449504,14
+pca50_ridge,meta_effect_projection,0.6562827053898482,14
+ridge_rank_a1,gse113957_only_ridge,0.8769132653061226,14
+ridge_rank_a1,gse226189_only_ridge,0.7018413134484563,14
+ridge_rank_a1,meta_effect_projection,0.6340266875981161,14
+ridge_rank_a1,pca50_ridge,0.6419250392464678,14

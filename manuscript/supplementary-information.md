@@ -1,5 +1,5 @@
 ---
-title: "Supplementary information: Chronological-age transcriptomic directions are not portable scalar readouts of partial reprogramming"
+title: "Supplementary information: Five chronological-age transcriptomic directions fail a locked portability benchmark across partial-reprogramming interventions"
 author: "Oğuzcan Ünver"
 date: "30 September 2026"
 geometry: margin=1in
@@ -16,8 +16,9 @@ urlcolor: blue
 3. Frozen framework and deviations  
 4. Primary and secondary results  
 5. Adaptive Benchmark B1  
-6. Supplementary figures and tables  
-7. Reproducibility and rights boundary
+6. Post-review Extension C1
+7. Supplementary figures and tables
+8. Reproducibility and rights boundary
 
 # 1. Extended study design and temporal firewall
 
@@ -240,7 +241,81 @@ correlations had median 0.053812. Leave-one-family-out correlations were:
 The median was 0.196995. These are descriptive correlations over a fixed gene universe. Gene counts
 were not used as biological-replicate sample sizes.
 
-# 6. Supplementary tables
+# 6. Post-review Extension C1
+
+C1 was frozen at commit `93c04d7` before its outcomes were calculated. Its Markdown and JSON lock
+files have SHA-256 values `7fdf1b4e27b0d16af3b0613cc011b0a91d8f5b80f9b9013430278b9a0166a9dd`
+and `01420f7ebf81df459e022c7c87c49f300600da4f2ef1eabfaaae4bee1ec72ca0`. It was requested after
+review of the complete manuscript, so every C1 result is explicitly outcome-aware and does not alter
+the historical locks.
+
+## 6.1 Hierarchical agreement and gate sensitivity
+
+The contrast-weighted median pairwise agreement of 0.744565 was reproduced. Giving each of 14
+families equal weight yielded 0.622514. The family-cluster bootstrap estimate had median 0.630315 and
+95% percentile interval 0.515200–0.737703. Leaving out one family at a time produced estimates from
+0.593477 to 0.652182. Thus no single family or contrast-rich study accounts for the below-gate
+result.
+
+The five model counts across the eight favourable-labelled families were 3, 3, 5, 2 and 3. One model
+met a four-of-eight threshold and one met five-of-eight; none met six-, seven- or eight-of-eight.
+Across agreement thresholds from 0.50 to 1.00, the observed contrast-weighted result passes only at
+thresholds up to 0.725 and the equal-family result only up to 0.600. These curves are descriptive and
+do not make any threshold biologically privileged.
+
+## 6.2 Stratified summaries
+
+| Dimension | Stratum | Families | Median agreement | Pairwise range |
+|---|---|---:|---:|---:|
+| Species | Human | 5 | 0.700 | 0.600–1.000 |
+| Species | Mouse | 3 | 0.667 | 0.333–1.000 |
+| Intervention | Chemical | 2 | 1.000 | 0.500–1.000 |
+| Intervention | Genetic | 6 | 0.667 | 0.500–0.833 |
+| Context | Fibroblast | 5 | 0.800 | 0.400–1.000 |
+| Context | Retinal pigment epithelium | 2 | 0.500 | 0.000–1.000 |
+
+Small strata and wide method-pair ranges preclude attribution of heterogeneity to one biological or
+technical factor.
+
+## 6.3 Gene-effect reliability
+
+Only four favourable families had at least four contrast units. Their raw median split-half
+Spearman correlations were 0.558 (MPTR), 0.840 (mouse chemical), 0.323 (SOKM) and 0.678 (human
+chemical). Eight individual contrasts also supported independent arm splitting; raw correlations
+ranged from 0.188 to 0.912. These values establish a partial, heterogeneous noise ceiling. They do
+not support reliability correction for the four ineligible families, but show that the observed
+cross-family median of 0.054 is well below within-context reproducibility in several estimable
+settings.
+
+## 6.4 Feature coverage
+
+Historical-model coverage across ten expression matrices ranged from 0.8513 to 0.9999. Thresholds of
+0.60, 0.70 and 0.80 retained all ten matrices, 184 contrasts and the same agreement statistics. A
+0.90 threshold retained five matrices, 49 contrasts and eight total families; contrast-weighted and
+equal-family median agreement remained 0.734694 and 0.666123. A separate refit on the 8,427 features
+present in every matrix yielded 0.779891 and 0.648621.
+
+## 6.5 Contemporary exploratory comparator
+
+Pasta was pinned to official repository commit
+`58bcc7a69ee97f2dc9e3623ac86538c251ddd498`. The three required model files had SHA-256 values:
+
+- `v_genes_model.rda`: `42289278a0a0d5171af23b108b086deea7b413d287559a9ec39cf7c76269cb5f`
+- `beta_Pasta.rda`: `b4a1891b7ed0737fbb784a89f6e00a9dfa07a15fa53359975f78f42fe92722e8`
+- `cvfit_Pasta.rda`: `158a9ec9d9e53786c85bfc8af3593bfa99ae4bc949c4ad3f2afb767c14befa56`
+
+The Python reconstruction reproduced the official three-sample example with maximum absolute error
+`4.73×10^-11`. Pasta oriented the mouse and human age controls youthward by 18.195 and 52.184 units.
+Its favourable-family effects were negative for MPTR, SOKM, RPE OSK and RPE GSTA4 and positive for
+mouse chemical, human OSK/O4YRSK, early human OSKM and human chemical: four of eight positive. This
+result is exploratory, post-review and outcome-aware. No exact benchmark accession was found in the
+public article or packaged files, but the complete training sample list could not be audited.
+
+The 2026 tAge model was not run. Its official public repository uses the MGB Open Access License 1.0
+for non-commercial academic use and directs commercial users to obtain a separate agreement. The
+author's commercial affiliation made exclusion the conservative rights-compliant choice.
+
+# 7. Supplementary tables
 
 - **Supplementary Table 1:** `tables/supplementary-table-1-datasets.csv` — dataset roles, species,
   modality, biological unit and public date.
@@ -257,8 +332,11 @@ were not used as biological-replicate sample sizes.
   gene-effect correlation matrix.
 - **Supplementary Table 8:** `results/benchmark-b1/leave-one-family-out-gene-consensus.csv` —
   consensus transfer results.
+- **Supplementary Tables 9–22:** `results/post-review-c1/` — hierarchical agreement, cluster
+  bootstrap, threshold sensitivity, strata, reliability, feature coverage, common-feature refit and
+  Pasta outputs.
 
-# 7. Reproducibility and rights boundary
+# 8. Reproducibility and rights boundary
 
 The reproducibility package includes analysis and figure source code, configurations, exact input
 manifests, tests, aggregate result tables and audit receipts. It excludes raw public expression

@@ -2,8 +2,8 @@
 
 This repository is the reproducibility release for:
 
-> **Chronological-age transcriptomic directions are not portable scalar readouts of partial
-> reprogramming**
+> **Five chronological-age transcriptomic directions fail a locked portability benchmark across
+> partial-reprogramming interventions**
 
 The study asks whether transcriptomic directions trained to predict chronological age provide a
 portable scalar readout across public partial-reprogramming experiments. The original positive
@@ -14,14 +14,14 @@ explicitly adaptive benchmark compared six attempted age-direction models (five 
 All five evaluable models correctly oriented two independent young-minus-old controls. Their median
 pairwise agreement on intervention direction was 0.744565, below the locked 0.80 gate, and no model
 was youthward in at least 80% of eight source-labelled favourable families. The supported conclusion
-is therefore non-portability in the evaluated datasets—not absence of functional, epigenetic or
-other biological effects in the source studies.
-
-**Publication status:** Preprint — not peer reviewed.
+is therefore non-portability for these evaluated directions—not absence of functional, epigenetic or
+other biological effects in the source studies. Post-review family weighting, reliability and
+feature-coverage analyses are retained separately under Extension C1; exploratory Pasta oriented both
+age controls but was positive in four of eight favourable-labelled families.
 
 ## Start here
 
-- `paper/manuscript.pdf` — single-author preprint.
+- `paper/manuscript.pdf` — submission manuscript.
 - `paper/supplement.pdf` — supplementary information.
 - `manuscript/` — editable source, figures and publication tables.
 - `REPRODUCIBILITY.md` — environment, inputs and execution order.
@@ -42,7 +42,7 @@ PYTHONPATH=code .venv/bin/python -m pytest -q code/tests
 .venv/bin/python code/verify_manuscript_claims.py
 ```
 
-Expected result: 15 tests pass and ten manuscript-claim groups pass.
+Expected result: 19 tests pass and eleven manuscript-claim groups pass.
 
 ## Claim boundary
 

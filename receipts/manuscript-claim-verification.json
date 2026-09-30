@@ -10,14 +10,16 @@
     "known-target universe, missingness, percentiles, and null result",
     "B1 model count, contrasts, controls, gates, and concordance summaries",
     "elastic-net selected hyperparameters and zero non-zero coefficients",
+    "C1 family weighting, uncertainty, coverage, common-feature, and Pasta results",
     "high-risk unsupported affirmative phrases absent"
   ],
-  "check_count": 10,
+  "check_count": 11,
   "sources": [
     "results/adaptive-y-a1/summary.json",
     "results/adaptive-discovery-a1/",
     "results/validation/",
     "results/target-evaluation/",
-    "results/benchmark-b1/summary-r2.json"
+    "results/benchmark-b1/summary-r2.json",
+    "results/post-review-c1/summary.json"
   ]
 }

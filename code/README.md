@@ -1,3 +1,7 @@
 # Analysis code boundary
 
-This directory intentionally contains no exploratory notebook or data download script yet. Add code only after the lock procedure is signed and the exact input manifest is committed. The first code commit must create deterministic, command-line pipeline stages for manifest validation, preprocessing, discovery scoring, immutable rank export, and separately invoked validation scoring.
+This directory contains deterministic command-line stages for manifest validation, preprocessing,
+discovery scoring, validation, Adaptive Benchmark B1, post-review Extension C1, figures and claim
+verification. Historical runners and repaired outputs are retained separately; do not overwrite an
+earlier result directory when reproducing a later stage. Run tests with
+`PYTHONPATH=code python -m pytest -q code/tests`.

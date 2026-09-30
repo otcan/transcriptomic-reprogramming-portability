@@ -61,10 +61,13 @@ mpl.rcParams.update(
     }
 )
 
-BLUE = "#2F6B8A"
-ORANGE = "#D17A22"
-RED = "#B54749"
-GREEN = "#3D8061"
+# Okabe-Ito-derived palette. Direction is also encoded by signs, labels or position.
+BLUE = "#0072B2"
+ORANGE = "#D55E00"
+SKY = "#56B4E9"
+PURPLE = "#CC79A7"
+RED = ORANGE
+GREEN = BLUE
 GREY = "#667085"
 PALE = "#F2F4F7"
 
@@ -242,7 +245,7 @@ def figure3_benchmark() -> None:
     ax = axes[0, 1]
     panel_label(ax, "b")
     sign = np.sign(age.T)
-    sns.heatmap(sign, cmap=LinearSegmentedColormap.from_list("sign", [RED, "white", GREEN]), vmin=-1, vmax=1,
+    sns.heatmap(sign, cmap=LinearSegmentedColormap.from_list("sign", [ORANGE, "white", BLUE]), vmin=-1, vmax=1,
                 annot=age.T, fmt=".3f", cbar=False, linewidths=0.5, ax=ax)
     ax.set_yticklabels([METHOD_LABELS[m] for m in METHODS], rotation=0)
     ax.set_xticklabels(["Mouse fibroblasts", "Human fibroblasts"], rotation=20, ha="right")
@@ -256,7 +259,7 @@ def figure3_benchmark() -> None:
     raw = family.loc[ordered, METHODS]
     sign = np.sign(raw)
     annotation = raw.map(lambda x: "+" if x > 0 else ("−" if x < 0 else "0"))
-    sns.heatmap(sign, cmap=LinearSegmentedColormap.from_list("sign2", [RED, "white", GREEN]), vmin=-1, vmax=1,
+    sns.heatmap(sign, cmap=LinearSegmentedColormap.from_list("sign2", [ORANGE, "white", BLUE]), vmin=-1, vmax=1,
                 annot=annotation, fmt="", cbar=False, linewidths=0.5, ax=ax)
     ax.set_yticklabels([FAMILY_LABELS[f] for f in ordered], rotation=0)
     ax.set_xticklabels([METHOD_LABELS[m] for m in METHODS], rotation=35, ha="right")
@@ -329,6 +332,75 @@ def figure4_concordance() -> None:
     save(fig, "figure-4-concordance-and-interpretation")
 
 
+def figure5_post_review() -> None:
+    c1 = ROOT / "results" / "post-review-c1"
+    summary = json.loads((c1 / "summary.json").read_text())
+    loo = pd.read_csv(c1 / "leave-one-family-out-agreement.csv")
+    coverage = pd.read_csv(c1 / "coverage-threshold-sensitivity.csv")
+    pasta = pd.read_csv(c1 / "pasta-favourable-family-means.csv").set_index("family")
+    historical = pd.read_csv(ROOT / "results/benchmark-b1/favourable-family-means.csv", index_col=0)[METHODS]
+
+    fig, axes = plt.subplots(2, 2, figsize=(8.4, 7.2), constrained_layout=True)
+
+    ax = axes[0, 0]
+    panel_label(ax, "a")
+    values = [summary["contrast_weighted_median_pairwise_agreement"], summary["equal_family_median_pairwise_agreement"]]
+    ax.bar([0, 1], values, color=[SKY, BLUE], width=0.62)
+    bootstrap = summary["cluster_bootstrap"]
+    ax.errorbar(1, bootstrap["median"],
+                yerr=[[bootstrap["median"] - bootstrap["lower_95"]],
+                      [bootstrap["upper_95"] - bootstrap["median"]]],
+                color="black", capsize=4, lw=1.2, marker="o", ms=3)
+    ax.axhline(0.8, color=ORANGE, ls="--", lw=1, label="Locked 0.80 gate")
+    ax.set_xticks([0, 1], ["Contrast-\nweighted", "Equal-family"])
+    ax.set_ylim(0.45, 0.86)
+    ax.set_ylabel("Median pairwise sign agreement")
+    ax.legend(frameon=False, fontsize=6)
+    ax.set_title("Family weighting lowers agreement")
+
+    ax = axes[0, 1]
+    panel_label(ax, "b")
+    ax.plot(range(len(loo)), loo.equal_family_median_agreement, marker="o", color=BLUE, lw=1)
+    ax.axhline(0.8, color=ORANGE, ls="--", lw=1)
+    ax.set_ylim(0.45, 0.86)
+    ax.set_xticks(range(len(loo)), [FAMILY_LABELS.get(x, x.replace("GSE", "")) for x in loo.held_family],
+                  rotation=55, ha="right")
+    ax.set_ylabel("Equal-family median agreement")
+    ax.set_title("No single family explains the result")
+
+    ax = axes[1, 0]
+    panel_label(ax, "c")
+    ax.plot(coverage.coverage_threshold, coverage.contrast_weighted_median_agreement,
+            marker="o", color=SKY, label="Contrast-weighted")
+    ax.plot(coverage.coverage_threshold, coverage.equal_family_median_agreement,
+            marker="s", color=BLUE, label="Equal-family")
+    common = summary["common_feature_sensitivity"]
+    ax.scatter([0.825], [common["contrast_weighted_median_agreement"]], marker="^", color=PURPLE,
+               label="8,427-gene common refit")
+    ax.scatter([0.825], [common["equal_family_median_agreement"]], marker="v", color=PURPLE)
+    ax.axhline(0.8, color=ORANGE, ls="--", lw=1)
+    ax.set_xlim(0.575, 0.925)
+    ax.set_ylim(0.45, 0.86)
+    ax.set_xlabel("Minimum feature coverage")
+    ax.set_ylabel("Median agreement")
+    ax.legend(frameon=False, fontsize=6)
+    ax.set_title("Coverage choices do not restore portability")
+
+    ax = axes[1, 1]
+    panel_label(ax, "d")
+    combined = historical.copy()
+    combined["pasta"] = pasta.loc[combined.index, "pasta_youth_direction"]
+    annotation = combined.map(lambda x: "+" if x > 0 else ("−" if x < 0 else "0"))
+    sns.heatmap(np.sign(combined), cmap=LinearSegmentedColormap.from_list("sign3", [ORANGE, "white", BLUE]),
+                vmin=-1, vmax=1, annot=annotation, fmt="", cbar=False, linewidths=0.5, ax=ax)
+    ax.set_yticklabels([FAMILY_LABELS.get(x, x) for x in combined.index], rotation=0)
+    ax.set_xticklabels([*[METHOD_LABELS[m] for m in METHODS], "Pasta\n(exploratory)"], rotation=40, ha="right")
+    ax.set_xlabel("")
+    ax.set_ylabel("")
+    ax.set_title("Contemporary Pasta remains split (4/8)")
+    save(fig, "figure-5-post-review-robustness")
+
+
 def supplementary_figures() -> None:
     matrix = pd.read_csv(ROOT / "results/benchmark-b1/contrast-matrix.csv")
     values = matrix[METHODS]
@@ -382,6 +454,7 @@ def main() -> None:
     figure2_primary()
     figure3_benchmark()
     figure4_concordance()
+    figure5_post_review()
     supplementary_figures()
     manifest = {}
     for path in sorted(OUT.iterdir()):

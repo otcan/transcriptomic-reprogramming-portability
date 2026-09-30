@@ -1,0 +1,11 @@
+method_1,method_2,n,agreement
+ridge_rank_a1,pca50_ridge,184,0.8043478260869565
+ridge_rank_a1,meta_effect_projection,184,0.717391304347826
+ridge_rank_a1,gse113957_only_ridge,184,0.8315217391304348
+ridge_rank_a1,gse226189_only_ridge,184,0.7663043478260869
+pca50_ridge,meta_effect_projection,184,0.782608695652174
+pca50_ridge,gse113957_only_ridge,184,0.842391304347826
+pca50_ridge,gse226189_only_ridge,184,0.7010869565217391
+meta_effect_projection,gse113957_only_ridge,184,0.7228260869565217
+meta_effect_projection,gse226189_only_ridge,184,0.6684782608695652
+gse113957_only_ridge,gse226189_only_ridge,184,0.6195652173913043

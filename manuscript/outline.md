@@ -2,7 +2,7 @@
 
 ## Proposed title
 
-*Chronological-age transcriptomic directions are not portable scalar readouts of partial reprogramming*
+*Five chronological-age transcriptomic directions fail a locked portability benchmark across partial-reprogramming interventions*
 
 ## One-sentence abstract claim placeholder
 

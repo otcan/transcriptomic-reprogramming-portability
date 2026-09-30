@@ -140,6 +140,28 @@ coef = elastic["coefficients"]
 assert int((coef != 0).sum()) == 0
 checked("elastic-net selected hyperparameters and zero non-zero coefficients")
 
+with (RESULTS / "post-review-c1" / "summary.json").open() as handle:
+    c1 = json.load(handle)
+assert c1["contrast_count"] == 184
+assert c1["benchmark_family_count"] == 14
+close(c1["contrast_weighted_median_pairwise_agreement"], 0.7445652173913043)
+close(c1["equal_family_median_pairwise_agreement"], 0.6225143903715332)
+close(c1["cluster_bootstrap"]["lower_95"], 0.5151998299319728)
+close(c1["cluster_bootstrap"]["upper_95"], 0.7377029778257458)
+close(c1["leave_one_family_out_minimum"], 0.5934770357847281)
+close(c1["leave_one_family_out_maximum"], 0.6521819526627219)
+assert c1["favourable_positive_counts"] == {
+    "ridge_rank_a1": 3, "pca50_ridge": 3, "meta_effect_projection": 5,
+    "gse113957_only_ridge": 2, "gse226189_only_ridge": 3,
+}
+close(c1["feature_coverage_minimum"], 0.8513102924420812)
+close(c1["common_feature_sensitivity"]["contrast_weighted_median_agreement"], 0.779891304347826)
+close(c1["common_feature_sensitivity"]["equal_family_median_agreement"], 0.6486214678178963)
+assert c1["pasta"]["implementation_validation"]["status"] == "PASS"
+assert c1["pasta"]["both_age_controls_positive"] is True
+assert c1["pasta"]["positive_favourable_families"] == 4
+checked("C1 family weighting, uncertainty, coverage, common-feature, and Pasta results")
+
 manuscript = (ROOT / "manuscript" / "manuscript.md").read_text()
 for forbidden in (
     "prospectively validated",
@@ -160,6 +182,7 @@ payload = {
         "results/validation/",
         "results/target-evaluation/",
         "results/benchmark-b1/summary-r2.json",
+        "results/post-review-c1/summary.json",
     ],
 }
 OUT.write_text(json.dumps(payload, indent=2) + "\n")

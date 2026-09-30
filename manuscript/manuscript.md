@@ -1,5 +1,5 @@
 ---
-title: "Chronological-age transcriptomic directions are not portable scalar readouts of partial reprogramming"
+title: "Five chronological-age transcriptomic directions fail a locked portability benchmark across partial-reprogramming interventions"
 author:
   - "Oğuzcan Ünver"
 date: "30 September 2026"
@@ -10,27 +10,28 @@ linkcolor: blue
 urlcolor: blue
 ---
 
-**Article type:** Preprint / research report  
-**Status:** **Preprint — not peer reviewed.**  
-**Affiliation:** Metastate Bio Inc, Wilmington, Delaware, USA  
+**Article type:** Analysis<br>
+**Target journal:** *Nature Aging*<br>
+**Affiliation:** Metastate Bio Inc, Wilmington, Delaware, USA<br>
 **Corresponding author:** Oğuzcan Ünver; can@metastate.bio; ORCID:
 0009-0007-2023-5084
 
 # Abstract
 
-Transcriptomic age models are applied to reprogramming experiments as scalar measures
-of cellular rejuvenation, although prediction of chronological age does not establish sensitivity to
-beneficial intervention. We constructed a temporally locked four-axis framework from public data
-available by 2024, challenged it against later studies without refitting, and then compared five
-evaluable age-direction models across 184 contrasts from partial-reprogramming datasets. The frozen
-positive framework failed its human chemical and trajectory-order endpoints, and later-tested targets
-were not enriched. All five benchmark models oriented two independent young–old controls correctly,
-but median pairwise agreement on intervention direction was 0.745, below a locked 0.80 criterion.
-No model was youthward in at least 80% of eight source-labelled favourable study families; the best
-fraction was 0.625. Gene-level intervention directions were also weakly concordant across families.
-Thus, chronological-age transcriptomic directions were not portable scalar readouts of partial
-reprogramming. Rejuvenation claims require intervention-specific and orthogonal
-qualification beyond age prediction.
+Chronological-age models are used as scalar measures of cellular rejuvenation, although age
+prediction does not establish sensitivity to beneficial intervention. We constructed a temporally
+locked four-axis framework from public data available by 2024, challenged it against later studies
+without refitting, and compared five evaluable age directions across 184 partial-reprogramming
+contrasts. The frozen positive framework failed its human chemical and trajectory-order endpoints.
+All five benchmark models oriented two independent young–old controls correctly, but their median
+pairwise agreement on intervention direction was 0.745. Equal weighting across 14 study families
+reduced agreement to 0.623 (family-cluster bootstrap 95% interval 0.515–0.738). No model was
+youthward in more than five of eight source-labelled favourable families. Cross-family gene effects
+were weakly concordant relative to the within-family reproducibility estimable in four families. A
+post-review exploratory application of the contemporary Pasta model oriented both age controls but
+was positive in only four of eight favourable families. These results show that age prediction did
+not establish intervention portability for the evaluated directions. Rejuvenation claims require
+intervention-specific and orthogonal qualification.
 
 Molecular clocks compress high-dimensional measurements into quantities associated with age,
 morbidity, mortality or the pace of ageing [1–3]. This compression is attractive for partial
@@ -138,18 +139,35 @@ across intervention contrasts had to reach 0.80. Restricting the summary to the 
 methods, median sign agreement was 0.745. The result remained below threshold; including the failed
 constant method would reduce interpretability rather than provide evidence for transportability.
 
+Because the 184 contrasts are clustered within studies and families, we added an explicitly
+post-review, outcome-aware sensitivity under locked Amendment C1. Equal weighting of the 14
+benchmark families lowered median pairwise agreement to 0.623. A 10,000-draw cluster bootstrap that
+resampled families gave a percentile interval of 0.515–0.738, and leave-one-family-out estimates
+ranged from 0.593 to 0.652 (Fig. 5a,b). The original contrast-weighted statistic is therefore not
+presented as 184 independent experiments; the family-weighted result is the more conservative
+summary.
+
 The divergence was visible at the study-family level (Fig. 3c). MPTR was positive for every method,
 whereas the human chemical family was negative for every method. Other families split by model. For
 example, the meta-effect and cohort-B directions were positive for human OSK/O4YRSK while the other
 three models were negative. GSTA4 was positive under three directions and negative under two. We had
 defined a stringent universal-direction gate: at least four methods had to be positive in at least
-80% of eight source-labelled favourable families. The observed model fractions were 0.250–0.625;
-none reached 0.80 (Fig. 3d). The labels describe favourable interpretations in source papers and are
-not treated as ground-truth rejuvenation outcomes.
+80% of eight source-labelled favourable families. With eight families, that rule requires at least
+seven positive calls. The observed counts were two to five; only one method reached four or five,
+and none reached six, seven or eight. Thus the conclusion does not depend on treating 80% as a
+biologically privileged boundary (Fig. 3d). The labels describe favourable interpretations in source
+papers and are not ground-truth rejuvenation outcomes.
 
 ![Adaptive multi-model benchmark. **a,** Corrected outer-CV age associations for five evaluable
 models. **b,** Independent young-minus-old controls. **c,** Signs of family-mean intervention
 effects. **d,** Fraction of source-labelled favourable families with positive mean effects.](figures/figure-3-model-benchmark.png){width=100%}
+
+Descriptive stratification did not identify a broadly consistent subset. Median method agreement was
+0.700 across five human families, 0.667 across three mouse families and 0.667 across six genetic
+families. The five fibroblast families had a median of 0.800, but individual method pairs ranged from
+0.400 to 1.000. The chemical and retinal strata each contained only two families and are too small
+for general conclusions. These analyses localize heterogeneity but do not attribute it to species,
+tissue or intervention class.
 
 ## Intervention effects do not converge on a common gene direction
 
@@ -164,12 +182,47 @@ We also formed a leave-one-family-out consensus by averaging standardized expres
 the other seven favourable-labelled families and correlating it with the held family. Correlations
 ranged from 0.060 to 0.336, with a median of 0.197 (Fig. 4c). Genes were not treated as biological
 replicates and these correlations are descriptive; no gene-count-based population inference is
-claimed. Together with the method sign matrix (Fig. 4a), the results show that portability failed at
-both the scalar-score and genome-wide effect levels.
+claimed.
+
+We estimated a partial noise ceiling wherever the design permitted split-half comparisons. Four of
+eight favourable families had at least four contrast units; their median raw split-half correlations
+were 0.323, 0.558, 0.678 and 0.840. Eight individual contrasts supported arm-split estimates, ranging
+from 0.188 to 0.912. Reliability is therefore heterogeneous and unavailable for half the families,
+but in the estimable higher-reliability contexts it substantially exceeds the cross-family median of
+0.054. The weak cross-family concordance cannot be assigned entirely to measurement noise, although
+the incomplete noise ceiling prevents a universal reliability-corrected claim. Together with the
+method sign matrix (Fig. 4a), these results support non-convergence in the evaluated data at both the
+scalar-score and gene-effect levels.
 
 ![Cross-method and cross-family concordance. **a,** Pairwise method sign agreement across 184
 contrasts. **b,** Spearman correlations between family-mean gene effects. **c,** Leave-one-family-out
 consensus correlations. **d,** Supported and unsupported interpretation.](figures/figure-4-concordance-and-interpretation.png){width=100%}
+
+## Robustness and a contemporary exploratory comparator
+
+Observed coverage of the 10,532 historical-model features ranged from 85.1% to 100.0%, rather than
+approaching the allowed 60% floor. Raising the eligibility threshold to 70% or 80% retained every
+dataset and result. At 90%, five expression matrices and 49 contrasts remained; contrast-weighted
+and equal-family agreements were 0.735 and 0.666. As a separate stress test, refitting all five
+historical methods on the 8,427 features present across every benchmark matrix yielded agreements of
+0.780 and 0.649, still below 0.80 (Fig. 5c).
+
+We also applied Pasta, a contemporary rank-based age-shift model released after the historical
+cutoff, as a post-review exploratory comparator [14]. A Python reconstruction reproduced the three
+bundled reference predictions to a maximum absolute error of `4.8×10^-11`. Pasta oriented both
+young-minus-old controls correctly but was youthward in four of the eight favourable-labelled
+families (Fig. 5d). Its feature coverage was 83.3–99.5%. This analysis was not part of B1, was added
+after the historical outcomes were known, and does not constitute an independent prospective test.
+No exact benchmark accession overlap was identified in the public article or model package, but a
+complete sample-level audit of all 21 Pasta training datasets was not possible from the released
+materials. We excluded the contemporary tAge model from this commercial-affiliation release because
+its public licence is restricted to non-commercial academic use [13].
+
+![Post-review robustness analyses. **a,** Contrast-weighted and equal-family method agreement; the
+point and whisker show the family-cluster bootstrap median and 95% interval. **b,** Leave-one-family-
+out agreement. **c,** Feature-coverage thresholds and the common-feature refit. **d,** Historical
+models and exploratory Pasta signs across eight source-labelled favourable families. Blue denotes a
+positive youth-oriented effect and orange a negative effect; signs provide redundant encoding.](figures/figure-5-post-review-robustness.png){width=100%}
 
 # Discussion
 
@@ -183,12 +236,12 @@ Recent large-scale work reaches a compatible conclusion from a different directi
 transcriptomic clocks trained on more than 11,000 samples found that chronological clocks correlated
 well with age but poorly with lifespan-modulating intervention effects, while mortality-oriented
 objectives performed better [13]. Pasta demonstrates that rank-based, multi-tissue transcriptomic
-models can generalize across platforms and recover experimental perturbations [14]. Our study does
-not benchmark those later systems head-to-head: their releases post-date our discovery cutoff and
-their input and licence requirements were not substituted into a locked historical analysis. Rather,
-we add a partial-reprogramming-specific stress test with temporally separated data, identity and
-pluripotency axes, explicit adverse and target endpoints, preserved failures, and complete
-method-by-contrast disclosure.
+models can generalize across platforms and recover experimental perturbations [14]. Our exploratory
+Pasta result shows that a stronger contemporary chronological model does not automatically resolve
+the present portability problem, but one model cannot represent the full modern clock class. The
+historical result and contemporary extension remain analytically separate. Our contribution is a
+partial-reprogramming-specific stress test with temporally separated data, identity and pluripotency
+axes, an adverse challenge, preserved failures and complete method-by-contrast disclosure.
 
 The findings argue against treating “transcriptomically younger” as a self-sufficient rejuvenation
 claim. At minimum, a candidate score should demonstrate held-out age association, correct control
@@ -207,15 +260,19 @@ descriptive. Source-labelled favourable families are not a gold standard. Within
 scale dependence but cannot remove composition and state confounding. The four `D` programmes cover
 selected transcriptional responses rather than total damage, and `P` is not a tumorigenicity score.
 The benchmark comparator was adaptive after primary failure, and its numerical gates are transparent
-decision rules rather than population hypothesis tests. Finally, newly published mortality- and
-outcome-trained clocks should be evaluated in a prospectively locked future benchmark with compatible
-inputs and rights.
+engineering criteria rather than natural biological thresholds or population hypothesis tests. The
+post-review analyses were outcome-aware, Pasta's complete training-sample overlap could not be
+audited from public materials, and the tAge licence did not permit inclusion under the present
+commercial affiliation. Newly published mortality- and outcome-trained clocks should therefore be
+evaluated in a prospectively locked future benchmark with compatible inputs and rights.
 
 The practical implication is methodological. A rejuvenation biomarker should be qualified for its
 intended context, not promoted from chronological-age prediction by analogy. Public reprogramming
 data now permit a tiered evaluation in which construction, intervention transport, state preservation
-and orthogonal function are separately auditable. In the datasets assessed here, no universal scalar
-transcriptomic rejuvenation direction survived that evaluation.
+and orthogonal function are separately auditable. In the datasets assessed here, none of the five
+historical directions met the locked portability criteria, and the exploratory Pasta model remained
+split across favourable-labelled families. This does not establish that chronological transcriptomic
+clocks can never measure an outcome-relevant component of rejuvenation.
 
 # Methods
 
@@ -235,6 +292,11 @@ hashed and committed before validation matrices were obtained. B1 was specified 
 validation failed and is labelled adaptive throughout. Published study conclusions and named targets
 were known; “temporally external” does not mean prospective or blinded.
 
+Reviewer-requested Extension C1 was locked before its outcomes were computed. It prespecified family
+weighting, cluster bootstrap, leave-one-family-out, threshold, stratum, reliability and feature-
+coverage analyses, plus one contemporary comparator. C1 is explicitly post-review and outcome-aware;
+it tests robustness but does not retroactively alter or rescue B1.
+
 ## Expression representation and orthology
 
 Gene identifiers were reduced to approved symbols using Ensembl release 111 annotations. Duplicate
@@ -244,7 +306,8 @@ with ambiguous or one-to-many mappings were excluded. Counts were converted to l
 million plus 0.5 after source-level filtering. Deposited normalized expression was used when a common
 raw matrix was unavailable. Within each sample, eligible genes were percentile-ranked. New datasets
 required at least 60% feature coverage; unobserved features were filled with frozen training-feature
-means.
+means. C1 reported actual coverage for every matrix, repeated eligibility at 70%, 80% and 90%, and
+refitted the historical models on the 8,427-feature intersection shared by all benchmark matrices.
 
 ## Construction of Y_A1
 
@@ -298,6 +361,8 @@ successful discovery contrasts, and reversal consistency relative to negative co
 0.40, 0.40 and 0.20. The five known later targets were GSTA4, DDX21, TOMM70A, SERBP1 and PHGDH [12,17].
 Their mean frozen-rank percentile was compared with 100,000 gene sets matched to discovery-reference
 expression deciles (seed 271828). Missing targets were reported and not replaced.
+This underpowered three-of-five evaluable analysis was treated as secondary corroboration, not as a
+major basis for the portability conclusion.
 
 ## Adaptive Benchmark B1
 
@@ -329,10 +394,31 @@ standardized within family on 9,543 common mapped genes. We computed all pairwis
 correlations and leave-one-family-out correlations between each held family and the mean of the other
 seven. Genes were not treated as biological replicates.
 
+## Post-review Extension C1
+
+For each method pair, sign agreement was first computed within each of the 14 benchmark families and
+then averaged across families; the reported statistic is the median across ten method pairs. The
+cluster bootstrap resampled 14 families with replacement 10,000 times (seed 3092026). The
+leave-one-family-out analysis recomputed the equal-family statistic after omitting each family. Gate
+sensitivity evaluated agreement thresholds from 0.50 to 1.00 in increments of 0.025 and favourable-
+family requirements from four to eight of eight.
+
+Strata were fixed by species, intervention class and cellular context. Split-half reliability used
+balanced partitions of contrast units for families with at least four units. Where both treatment
+and control contained at least two biological units, a separate arm-split analysis reconstructed two
+independent effect vectors. Spearman–Brown values were recorded, but the manuscript reports raw
+split-half correlations to avoid implying full-study reliability.
+
+Pasta was reconstructed from the authors' MIT-licensed model package at commit
+`58bcc7a69ee97f2dc9e3623ac86538c251ddd498`, using its 8,113-gene list, median imputation,
+within-sample ranks and frozen ridge coefficients [14]. Age-shift predictions were sign-reversed so
+that positive values denote a youth-associated direction. Package files and their SHA-256 hashes,
+implementation validation and the licensing decision for tAge are recorded in the release audit.
+
 ## Software and reproducibility
 
-Analyses used Python 3.12 with NumPy, pandas, SciPy, scikit-learn, h5py, anndata, matplotlib and
-seaborn in a frozen local environment. All stochastic procedures used recorded seeds. Tests cover
+Analyses used Python 3.12 with NumPy, pandas, SciPy, scikit-learn, h5py, anndata, rdata, matplotlib
+and seaborn in a frozen local environment. All stochastic procedures used recorded seeds. Tests cover
 metadata parsing, fold construction, rank scoring, orthology, normalization, contrasts, method
 orientation and the CV repair. The release bundle contains code, configurations, hashes, aggregate
 results, complete contrast tables and figure sources, but excludes raw public matrices and
@@ -342,14 +428,14 @@ participant-linked records.
 
 All expression data are public under the GEO accessions listed above. The submission bundle includes
 exact source URLs, retrieval dates, file sizes and SHA-256 hashes. Raw matrices are not redistributed.
-The reviewed manuscript repository is prepared for public release at
-<https://github.com/otcan/transcriptomic-reprogramming-portability>. The immutable archival DOI
-will be added to the public record when the approved release is deposited.
+The reviewed manuscript repository will be made publicly available at
+<https://github.com/otcan/transcriptomic-reprogramming-portability>. The immutable archival
+DOI will be inserted before submission: **[ZENODO DOI — REQUIRED BEFORE SUBMISSION]**.
 
 # Code availability
 
-The complete analysis and figure code, frozen configurations, tests and aggregate result tables are
-prepared for public release at
+The complete analysis and figure code, frozen configurations, tests and aggregate result tables will
+be made publicly available at
 <https://github.com/otcan/transcriptomic-reprogramming-portability>. Immutable commits and
 manifests are included. No language model or post-cutoff biological database was used as a model
 feature or to rank targets.
@@ -360,7 +446,7 @@ This research received no external funding. Computational resources were provide
 Inc.
 
 OpenAI Codex was used under human direction to assist with code drafting, analysis orchestration,
-literature organization and manuscript drafting. The author inspected the source data, code,
+literature organization and manuscript drafting. The authors inspected the source data, code,
 computations, citations, figures and claims and retain full responsibility for the work and its
 conclusions.
 

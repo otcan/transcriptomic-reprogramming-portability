@@ -1,0 +1,70 @@
+{
+  "amendment": "C1",
+  "post_review_outcome_aware": true,
+  "methods": [
+    "ridge_rank_a1",
+    "pca50_ridge",
+    "meta_effect_projection",
+    "gse113957_only_ridge",
+    "gse226189_only_ridge"
+  ],
+  "contrast_count": 184,
+  "benchmark_family_count": 14,
+  "contrast_weighted_median_pairwise_agreement": 0.7445652173913043,
+  "equal_family_median_pairwise_agreement": 0.6225143903715332,
+  "cluster_bootstrap": {
+    "draws": 10000,
+    "seed": 3092026,
+    "lower_95": 0.5151998299319728,
+    "median": 0.6303146258503403,
+    "upper_95": 0.7377029778257458
+  },
+  "leave_one_family_out_minimum": 0.5934770357847281,
+  "leave_one_family_out_maximum": 0.6521819526627219,
+  "favourable_positive_counts": {
+    "ridge_rank_a1": 3,
+    "pca50_ridge": 3,
+    "meta_effect_projection": 5,
+    "gse113957_only_ridge": 2,
+    "gse226189_only_ridge": 3
+  },
+  "family_split_reliability_estimable": 4,
+  "arm_split_reliability_contrasts": 8,
+  "feature_coverage_minimum": 0.8513102924420812,
+  "feature_coverage_maximum": 0.999905051272313,
+  "common_feature_sensitivity": {
+    "original_features": 10532,
+    "common_features": 8427,
+    "minimum_required": 2000,
+    "status": "RUN",
+    "contrast_weighted_median_agreement": 0.779891304347826,
+    "equal_family_median_agreement": 0.6486214678178963
+  },
+  "pasta": {
+    "implementation_validation": {
+      "status": "PASS",
+      "observed_model_genes": 8113,
+      "maximum_absolute_error": 4.730438263322867e-11,
+      "expected": {
+        "Prolif_1": 13.5843466008,
+        "OSKM_1": -8.3980706048,
+        "OSKM1nM_1": -15.6617237438
+      },
+      "observed": {
+        "Prolif_1": 13.584346600752696,
+        "OSKM_1": -8.398070604817834,
+        "OSKM1nM_1": -15.661723743775717
+      }
+    },
+    "lambda_min": 0.0010000000000000002,
+    "model_genes": 8113,
+    "age_control_effects": {
+      "GSE246954_age": 18.194642464813434,
+      "GSE297234_age": 52.18441068213921
+    },
+    "both_age_controls_positive": true,
+    "positive_favourable_families": 4,
+    "favourable_family_count": 8,
+    "positive_favourable_fraction": 0.5
+  }
+}

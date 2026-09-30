@@ -1,0 +1,37 @@
+{
+  "amendment": "C1",
+  "date": "2026-09-30",
+  "baseline_commit": "6bb77f63f813e4160f43f1b490d31a3e5694c9f0",
+  "evaluable_methods": [
+    "ridge_rank_a1",
+    "pca50_ridge",
+    "meta_effect_projection",
+    "gse113957_only_ridge",
+    "gse226189_only_ridge"
+  ],
+  "agreement_thresholds": [0.5, 0.525, 0.55, 0.575, 0.6, 0.625, 0.65, 0.675, 0.7, 0.725, 0.75, 0.775, 0.8, 0.825, 0.85, 0.875, 0.9, 0.925, 0.95, 0.975, 1.0],
+  "coverage_thresholds": [0.6, 0.7, 0.8, 0.9],
+  "cluster_bootstrap_draws": 10000,
+  "cluster_bootstrap_seed": 3092026,
+  "family_split_draws": 2000,
+  "family_split_seed": 3092027,
+  "arm_split_max_draws": 2000,
+  "arm_split_seed": 3092028,
+  "common_feature_minimum": 2000,
+  "favourable_family_strata": {
+    "GSE165177_MPTR": {"species": "human", "intervention": "genetic", "context": "fibroblast"},
+    "GSE246954_chemical": {"species": "mouse", "intervention": "chemical", "context": "fibroblast"},
+    "GSE176206_SOKM": {"species": "mouse", "intervention": "genetic", "context": "mesenchymal_adipogenic"},
+    "GSE297984_chemical": {"species": "human", "intervention": "chemical", "context": "fibroblast"},
+    "GSE297233_OSK": {"species": "human", "intervention": "genetic", "context": "fibroblast"},
+    "GSE297234_early_OSKM": {"species": "human", "intervention": "genetic", "context": "fibroblast"},
+    "GSE304042_ARPE_OSK": {"species": "human", "intervention": "genetic", "context": "retinal_pigment_epithelium"},
+    "GSE304043_GSTA4": {"species": "mouse", "intervention": "genetic", "context": "retinal_pigment_epithelium"}
+  },
+  "contemporary": {
+    "name": "Pasta",
+    "repository": "https://github.com/jsalignon/pasta",
+    "commit": "58bcc7a69ee97f2dc9e3623ac86538c251ddd498",
+    "license": "MIT"
+  }
+}

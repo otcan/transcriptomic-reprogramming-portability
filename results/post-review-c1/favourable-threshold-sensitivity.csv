@@ -1,0 +1,6 @@
+required_positive_families,threshold_fraction,methods_meeting_threshold
+4,0.5,1
+5,0.625,1
+6,0.75,0
+7,0.875,0
+8,1.0,0

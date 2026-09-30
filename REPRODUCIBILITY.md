@@ -23,11 +23,20 @@ The historical order is important:
 5. temporal validation;
 6. Adaptive Benchmark B1;
 7. B1 outer-CV r2 repair;
-8. manuscript figures.
+8. post-review Extension C1 in a separate outcome-aware stage;
+9. manuscript figures.
 
 Exact commands and the historical integrity boundaries are recorded in `receipts/` and `protocol/`.
 Do not overwrite prior outputs during reproduction. Run new outputs in a separate directory or clean
 clone.
+
+Extension C1 requires an independently cloned copy of the official Pasta repository pinned to commit
+`58bcc7a69ee97f2dc9e3623ac86538c251ddd498`. Verify the three model hashes in
+`readiness/contemporary-clock-audit.md`, then run:
+
+```bash
+PYTHONPATH=code python code/run_post_review_extension_c1.py --root . --pasta-dir /path/to/pasta
+```
 
 ## Tests and figure build
 
@@ -45,5 +54,10 @@ python code/verify_manuscript_claims.py
 - Methods at or above 80% favourable families: `0`.
 - Median pairwise family gene-effect Spearman: `0.0538123679329506`.
 - Median leave-one-family-out consensus Spearman: `0.1969951702374822`.
+- Equal-family median pairwise sign agreement: `0.6225143903715332`.
+- Family-cluster bootstrap 95% interval: `0.5151998299319728` to `0.7377029778257458`.
+- Common-feature refit agreement: `0.779891304347826` contrast-weighted and
+  `0.6486214678178963` equal-family.
+- Exploratory Pasta: both age controls positive; four of eight favourable-labelled families positive.
 
 These checks establish computational reproduction, not biological validation.
