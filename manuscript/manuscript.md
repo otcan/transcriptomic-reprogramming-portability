@@ -10,28 +10,22 @@ linkcolor: blue
 urlcolor: blue
 ---
 
-**Article type:** Analysis<br>
-**Target journal:** *Nature Aging*<br>
-**Affiliation:** Metastate Bio Inc, Wilmington, Delaware, USA<br>
-**Corresponding author:** Oğuzcan Ünver; can@metastate.bio; ORCID:
-0009-0007-2023-5084
+<!-- EDITION-FRONT-MATTER -->
 
 # Abstract
 
-Chronological-age models are used as scalar measures of cellular rejuvenation, although age
-prediction does not establish sensitivity to beneficial intervention. We constructed a temporally
-locked four-axis framework from public data available by 2024, challenged it against later studies
-without refitting, and compared five evaluable age directions across 184 partial-reprogramming
-contrasts. The frozen positive framework failed its human chemical and trajectory-order endpoints.
-All five benchmark models oriented two independent young–old controls correctly, but their median
-pairwise agreement on intervention direction was 0.745. Equal weighting across 14 study families
-reduced agreement to 0.623 (family-cluster bootstrap 95% interval 0.515–0.738). No model was
-youthward in more than five of eight source-labelled favourable families. Cross-family gene effects
-were weakly concordant relative to the within-family reproducibility estimable in four families. A
-post-review exploratory application of the contemporary Pasta model oriented both age controls but
-was positive in only four of eight favourable families. These results show that age prediction did
-not establish intervention portability for the evaluated directions. Rejuvenation claims require
-intervention-specific and orthogonal qualification.
+Chronological-age models are often used as scalar measures of cellular rejuvenation, but age
+prediction does not establish sensitivity to beneficial intervention. We froze a four-axis framework
+built from public data available by 2024, challenged it against later studies without refitting, and
+compared five evaluable age directions across 184 partial-reprogramming contrasts. The frozen
+framework failed its chemical and trajectory-order endpoints. All five models oriented two
+independent young–old controls, and their median pairwise agreement on intervention direction was
+0.745, indicating a shared component. Weighting 14 study families equally reduced agreement to 0.623
+(family-cluster bootstrap 95% interval 0.515–0.738), below the locked 0.80 criterion. No model was
+youthward in more than five of eight favourable-labelled families, and cross-family gene effects
+converged weakly. An exploratory application of the contemporary Pasta model was positive in four of
+eight such families. Transcriptomic youthward movement therefore requires intervention-specific,
+orthogonal qualification before being described as rejuvenation.
 
 Molecular clocks compress high-dimensional measurements into quantities associated with age,
 morbidity, mortality or the pace of ageing [1–3]. This compression is attractive for partial
@@ -441,17 +435,14 @@ participant-linked records.
 
 # Data availability
 
-All expression data are public under the GEO accessions listed above. The submission bundle includes
+All expression data are public under the GEO accessions listed above. The release bundle includes
 exact source URLs, retrieval dates, file sizes and SHA-256 hashes. Raw matrices are not redistributed.
-The reviewed manuscript repository will be made publicly available at
-<https://github.com/otcan/transcriptomic-reprogramming-portability>. The immutable archival
-DOI will be inserted before submission: **[ZENODO DOI — REQUIRED BEFORE SUBMISSION]**.
+<!-- EDITION-DATA-REPOSITORY -->
 
 # Code availability
 
-The complete analysis and figure code, frozen configurations, tests and aggregate result tables will
-be made publicly available at
-<https://github.com/otcan/transcriptomic-reprogramming-portability>. Immutable commits and
+The complete analysis and figure code, frozen configurations, tests and aggregate result tables are
+provided in the analysis repository described under Data availability. Immutable commits and
 manifests are included. No language model or post-cutoff biological database was used as a model
 feature or to rank targets.
 

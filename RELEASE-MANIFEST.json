@@ -312,8 +312,8 @@
     },
     {
       "path": "manuscript/manuscript.md",
-      "bytes": 38228,
-      "sha256": "d53ed560a9456f848ad8d73310397e3f096b21a9c9aa55dd0f7b4e30073a704a"
+      "bytes": 37604,
+      "sha256": "2a02f9fdd4340af5b3686f094f991cbaae3b3d50621e436d5f0b81a9f822d0a9"
     },
     {
       "path": "manuscript/outline.md",
@@ -357,23 +357,23 @@
     },
     {
       "path": "paper/manuscript.docx",
-      "bytes": 3294251,
-      "sha256": "55950f92a77b436f26e38e770d4fc6625f70cf34ab48a32b28593fda39c1b273"
+      "bytes": 3294085,
+      "sha256": "c3491a8970698d9fbe70720f0ad3a7c499f69e8ede7faa8b25166441ea40ab75"
     },
     {
       "path": "paper/manuscript.pdf",
-      "bytes": 3755394,
-      "sha256": "35a6decb8fb314c3cfac055dc1e6a8d42289c783e6dee69d094d28d91976dc14"
+      "bytes": 3754192,
+      "sha256": "8a4d0a2cea05b7c3f03df0c863803e9a9f8c6efc3a1d257d9d5ae321ef198530"
     },
     {
       "path": "paper/supplement.docx",
-      "bytes": 398360,
-      "sha256": "9aa17db5b940eb428300a6fce52c3781b9fe66db767db23bbe9beb031b38cd90"
+      "bytes": 398411,
+      "sha256": "4b5b42089479b7e04c16ce81f3cb341d7d7a2154961d0026568ec25d1b743a27"
     },
     {
       "path": "paper/supplement.pdf",
-      "bytes": 571193,
-      "sha256": "e1c58a8f43e0dc77eb77569e5655828d374cde0669c9baa0679e0159ff914527"
+      "bytes": 571288,
+      "sha256": "abf585791a849db418c42d0be9efa8d98b5944611d9ae123431852d8eed48fa5"
     },
     {
       "path": "preregistration.md",
