@@ -1,5 +1,10 @@
 # Transcriptomic partial-reprogramming portability benchmark
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23078079.svg)](https://doi.org/10.5281/zenodo.23078079)
+
+- Archived release v1.0.0: <https://doi.org/10.5281/zenodo.23078079>
+- Preprint (not peer reviewed): <https://doi.org/10.5281/zenodo.23078081>
+
 This repository is the reproducibility release for:
 
 > **Five chronological-age transcriptomic directions fail a locked portability benchmark across

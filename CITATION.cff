@@ -3,7 +3,8 @@ message: "If you use this code or evidence release, cite the archived release an
 title: "Transcriptomic partial-reprogramming portability benchmark"
 type: software
 version: 1.0.0
-date-released: 2026-09-30
+doi: "10.5281/zenodo.23078079"
+date-released: 2026-10-01
 authors:
   - family-names: "Ünver"
     given-names: "Oğuzcan"
